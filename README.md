@@ -29,5 +29,5 @@ For download see [https://github.com/breschie/OTRS-QuickDelete)
 Enjoy!
 
  Your Denny Bresch!
- [https://github.com/breschie)
+ [https://github.com/breschie]
 
