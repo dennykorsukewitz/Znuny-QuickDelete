@@ -59,6 +59,5 @@
         <Setting>
             <String Regex="">move_into</String>
         </Setting>
-    </ConfigItem>
-    
+    </ConfigItem>    
 </otrs_config>
