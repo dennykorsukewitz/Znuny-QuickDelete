@@ -1,8 +1,8 @@
 #
-# Copyright (C) 2013 Znuny GmbH, http://znuny.com/
+# Copyright (C) 2013 Denny Bresch
 #
 
-package Kernel::Modules::AgentTicketZnuny4OTRSQuickDelete;
+package Kernel::Modules::AgentTicketZnuny4OTRSQuickClose;
 
 use strict;
 use warnings;
@@ -50,10 +50,10 @@ sub Run {
         );
     }
 
-    my $Queue = $Self->{ConfigObject}->Get('Znuny4OTRS::QuickDelete::Queue');
-    if ($Queue) {
-        my $Success = $Self->{TicketObject}->TicketQueueSet(
-            Queue  => $Queue,
+    my $State = $Self->{ConfigObject}->Get('Znuny4OTRS::QuickClose::State');
+    if ($State) {
+        my $Success = $Self->{TicketObject}->TicketStateSet(
+            State    => $State,
             TicketID => $Self->{TicketID},
             UserID   => $Self->{UserID},
         );

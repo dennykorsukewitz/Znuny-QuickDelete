@@ -1,8 +1,8 @@
 #
-# Copyright (C) 2013 Znuny GmbH, http://znuny.com/
+# Copyright (C) 2013 Denny Bresch
 #
 
-package Kernel::Modules::AgentTicketZnuny4OTRSQuickClose;
+package Kernel::Modules::AgentTicketQuickDelete;
 
 use strict;
 use warnings;
@@ -37,7 +37,7 @@ sub Run {
 
     # check permissions
     my $Access = $Self->{TicketObject}->TicketPermission(
-        Type     => 'close',
+        Type     => 'move_into',
         TicketID => $Self->{TicketID},
         UserID   => $Self->{UserID}
     );
@@ -50,10 +50,10 @@ sub Run {
         );
     }
 
-    my $State = $Self->{ConfigObject}->Get('Znuny4OTRS::QuickClose::State');
-    if ($State) {
-        my $Success = $Self->{TicketObject}->TicketStateSet(
-            State    => $State,
+    my $Queue = $Self->{ConfigObject}->Get('Ticket::Frontend::AgentTicketQuickDelete###Queue');
+    if ($Queue) {
+        my $Success = $Self->{TicketObject}->TicketQueueSet(
+            Queue  => $Queue,
             TicketID => $Self->{TicketID},
             UserID   => $Self->{UserID},
         );
