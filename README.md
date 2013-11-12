@@ -1,5 +1,5 @@
 
-Denny Bresch - Quick Delete
+Quick Delete
 ========================
 
 **Feature List**
@@ -23,14 +23,11 @@ Not needed.
 
 **Download**
 
-For download see [http://znuny.com/d/](http://znuny.com/d/)
+For download see [https://github.com/breschie/OTRS-QuickDelete)
 
-**Commercial Support**
-
-For this extension and for OTRS in general visit [http://znuny.com](http://znuny.com). Looking forward to hear from you!
 
 Enjoy!
 
- Your Denny Bresch for Znuny!
- [http://znuny.com](http://znuny.com)
+ Your Denny Bresch!
+ [https://github.com/breschie)
 
