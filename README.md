@@ -9,6 +9,7 @@ this module is very similar to the both following modules, which exist in the ba
 (i recognized this configuration after built these module) - happened :)
 
 Ticket::Frontend::MenuModule###460-Delete
+
 Ticket::Frontend::PreMenuModule###450-Delete
 
 
