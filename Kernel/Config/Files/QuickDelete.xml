@@ -43,7 +43,7 @@
                 <NavBarName>Ticket</NavBarName>
             </FrontendModuleReg>
         </Setting>
-    </ConfigItem>       
+    </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::AgentTicketQuickDelete###Queue" Required="0" Valid="1">
         <Description Translatable="1">Defines the default delete queue for quick delete.</Description>
         <Group>Ticket</Group>
@@ -51,13 +51,13 @@
         <Setting>
             <String Regex="">Junk</String>
         </Setting>
-    </ConfigItem>	
+    </ConfigItem>
     <ConfigItem Name="Ticket::Frontend::AgentTicketQuickDelete###Permission" Required="0" Valid="1">
-        <Description Translatable="1">Required permissions to use the delete ticket screen in the agent interface.<
+        <Description Translatable="1">Required permissions to use the delete ticket screen in the agent interface.</Description>
         <Group>Ticket</Group>
         <SubGroup>Frontend::Agent::Ticket::QuickDelete</SubGroup>
         <Setting>
             <String Regex="">move_into</String>
         </Setting>
-    </ConfigItem>    
+    </ConfigItem>
 </otrs_config>
