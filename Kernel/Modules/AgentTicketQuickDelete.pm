@@ -20,6 +20,10 @@ sub new {
             $Self->{LayoutObject}->FatalError( Message => "Got no $_!" );
         }
     }
+	
+	# get config of frontend module
+	$Self->{Config} = $Self->{ConfigObject}->Get("Ticket::Frontend::$Self->{Action}");
+	
 
     return $Self;
 }
@@ -37,7 +41,7 @@ sub Run {
 
     # check permissions
     my $Access = $Self->{TicketObject}->TicketPermission(
-        Type     => 'move_into',
+        Type     => $Self->{Config}->{Permission},
         TicketID => $Self->{TicketID},
         UserID   => $Self->{UserID}
     );
@@ -50,7 +54,7 @@ sub Run {
         );
     }
 
-    my $Queue = $Self->{ConfigObject}->Get('Ticket::Frontend::AgentTicketQuickDelete###Queue');
+    my $Queue = $Self->{Config}->{Queue};
     if ($Queue) {
         my $Success = $Self->{TicketObject}->TicketQueueSet(
             Queue  => $Queue,
