@@ -41,3 +41,7 @@ Enjoy!
  [https://github.com/breschie]
  
  
+ 
+ [![pipeline status](https://git.znuny.com/znuny-public/Znuny4OTRS-CustomerMap/badges/master/pipeline.svg)](https://git.znuny.com/znuny-public/Znuny4OTRS-CustomerMap/commits/master)
+
+ 
