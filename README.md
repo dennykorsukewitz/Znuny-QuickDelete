@@ -1,7 +1,7 @@
 Quick Delete for OTRS 3.3
 ========================
-   
-	**OTRS-Delete will not longer supported for OTRS 4**
+
+    **OTRS-Delete will not longer supported for OTRS 4**
 
 **Feature List**
 
@@ -11,7 +11,7 @@ this module is very similar to the both following modules, which exist in the ba
 (i recognized this configuration after built these module) - happened :)
 
 Ticket::Frontend::MenuModule###460-Delete
- 
+
 Ticket::Frontend::PreMenuModule###450-Delete
 
 
@@ -39,6 +39,3 @@ Enjoy!
 
  Your Denny Bresch!
  [https://github.com/breschie]
- 
- 
- 

@@ -20,10 +20,9 @@ sub new {
             $Self->{LayoutObject}->FatalError( Message => "Got no $_!" );
         }
     }
-	
-	# get config of frontend module
-	$Self->{Config} = $Self->{ConfigObject}->Get("Ticket::Frontend::$Self->{Action}");
-	
+    # get config of frontend module
+    $Self->{Config} = $Self->{ConfigObject}->Get("Ticket::Frontend::$Self->{Action}");
+
 
     return $Self;
 }
@@ -71,5 +70,5 @@ sub Run {
     }
     return $Self->{LayoutObject}->Redirect( OP => $Self->{LastScreenOverview} );
 }
-1;
 
+1;
