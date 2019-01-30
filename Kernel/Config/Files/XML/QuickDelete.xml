@@ -51,18 +51,6 @@
             </Item>
         </Value>
     </Setting>
-    <Setting Name="Frontend::Navigation###AgentTicketQuickDelete###002-QuickDelete" Required="0" Valid="0">
-        <Description Translatable="1">Main menu item registration.</Description>
-        <Navigation>Frontend::Agent::ModuleRegistration::MainMenu</Navigation>
-        <Value>
-            <Array>
-                <DefaultItem ValueType="FrontendNavigation">
-                    <Hash>
-                    </Hash>
-                </DefaultItem>
-            </Array>
-        </Value>
-    </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketQuickDelete###Queue" Required="0" Valid="1">
         <Description Translatable="1">Defines the default delete queue for quick delete.</Description>
         <Navigation>Frontend::Agent::Ticket::QuickDelete</Navigation>
