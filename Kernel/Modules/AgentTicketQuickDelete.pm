@@ -67,6 +67,11 @@ sub Run {
                 Lock     => 'unlock',
                 UserID   => $Self->{UserID},
             );
+        } else {
+            return $LayoutObject->NoPermission(
+                Message    => Translatable('You dont have permissions to delete tickets.'),
+                WithHeader => 'yes',
+            );
         }
     }
     return $LayoutObject->Redirect( OP => $Self->{LastScreenOverview} );
