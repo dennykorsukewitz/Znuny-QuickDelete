@@ -12,6 +12,8 @@ package Kernel::Modules::AgentTicketQuickDelete;
 use strict;
 use warnings;
 
+use Kernel::Language qw(Translatable);
+
 sub new {
     my ( $Type, %Param ) = @_;
 
