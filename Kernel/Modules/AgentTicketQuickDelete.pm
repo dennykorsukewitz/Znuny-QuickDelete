@@ -14,6 +14,12 @@ use warnings;
 
 use Kernel::Language qw(Translatable);
 
+our @ObjectDependencies = (
+	'Kernel::System::Ticket',
+	'Kernel::Output::HTML::Layout',
+	'Kernel::Config',
+);
+
 sub new {
     my ( $Type, %Param ) = @_;
 

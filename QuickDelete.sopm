@@ -10,8 +10,8 @@
     <Description Lang="en">Enables quick delete in ticket action row.</Description>
     <Description Lang="de">Ermöglicht es ein Ticket in die Junk-Queue zu verschieben.</Description>
     <Filelist>
-        <File Permission="644" Location="Kernel/Config/Files/XML/QuickDelete.xml"/>
-        <File Permission="644" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
-        <File Permission="644" Location="Kernel/Language/de_AgentTicketQuickDelete.pm"/>
+        <File Permission="660" Location="Kernel/Config/Files/XML/QuickDelete.xml"/>
+        <File Permission="660" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
+        <File Permission="660" Location="Kernel/Language/de_AgentTicketQuickDelete.pm"/>
     </Filelist>
 </otrs_package>
