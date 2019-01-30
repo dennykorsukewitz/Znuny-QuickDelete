@@ -5,11 +5,11 @@
         <Navigation>Frontend::Agent::View::TicketZoom::MenuModule</Navigation>
         <Value>
             <Hash>
-                <Item Key="Module">Kernel::Output::HTML::TicketMenuGeneric</Item>
+                <Item Key="Module">Kernel::Output::HTML::TicketMenu::Generic</Item>
                 <Item Key="Name">Quick Delete</Item>
                 <Item Key="Description" Translatable="1">Delete this ticket</Item>
                 <Item Key="Action">AgentTicketQuickDelete</Item>
-                <Item Key="Link">Action=AgentTicketQuickDelete;TicketID=$QData{"TicketID"}</Item>
+                <Item Key="Link">Action=AgentTicketQuickDelete;TicketID=[% Data.TicketID | html %]</Item>
                 <Item Key="Target"></Item>
                 <Item Key="PopupType"></Item>
             </Hash>
@@ -20,11 +20,11 @@
         <Navigation>Frontend::Agent::TicketOverview::MenuModule</Navigation>
         <Value>
             <Hash>
-                <Item Key="Module">Kernel::Output::HTML::TicketMenuGeneric</Item>
+                <Item Key="Module">Kernel::Output::HTML::TicketMenu::Generic</Item>
                 <Item Key="Name">Quick Delete</Item>
                 <Item Key="Action">AgentTicketQuickDelete</Item>
                 <Item Key="Description" Translatable="1">Delete this ticket</Item>
-                <Item Key="Link">Action=AgentTicketQuickDelete;TicketID=$QData{"TicketID"}</Item>
+                <Item Key="Link">Action=AgentTicketQuickDelete;TicketID=[% Data.TicketID | html %]</Item>
                 <Item Key="Target"></Item>
                 <Item Key="PopupType"></Item>
             </Hash>

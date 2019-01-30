@@ -19,61 +19,57 @@ sub new {
     my $Self = {%Param};
     bless( $Self, $Type );
 
-    # check needed objects
-    for (qw(ParamObject DBObject LayoutObject LogObject ConfigObject QueueObject TimeObject TicketObject)) {
-        if ( !$Self->{$_} ) {
-            $Self->{LayoutObject}->FatalError( Message => "Got no $_!" );
-        }
-    }
-    # get config of frontend module
-    $Self->{Config} = $Self->{ConfigObject}->Get("Ticket::Frontend::$Self->{Action}");
-
-
     return $Self;
 }
 
 sub Run {
     my ( $Self, %Param ) = @_;
 
+    my $TicketObject = $Kernel::OM->Get('Kernel::System::Ticket');
+    my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
+    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+
+    my $Config = $ConfigObject->Get("Ticket::Frontend::$Self->{Action}");
+
     # check needed stuff
     if ( !$Self->{TicketID} ) {
-        return $Self->{LayoutObject}->ErrorScreen(
-            Message => 'No TicketID is given!',
-            Comment => 'Please contact the admin.',
+        return $LayoutObject->ErrorScreen(
+            Message => Translatable('No TicketID is given!'),
+            Comment => Translatable('Please contact the administrator.'),
         );
     }
 
     # check permissions
-    my $Access = $Self->{TicketObject}->TicketPermission(
-        Type     => $Self->{Config}->{Permission},
+    my $Access = $TicketObject->TicketPermission(
+        Type     => $Config->{Permission},
         TicketID => $Self->{TicketID},
         UserID   => $Self->{UserID}
     );
 
     # error screen, don't show ticket
     if ( !$Access ) {
-        return $Self->{LayoutObject}->NoPermission(
-            Message    => "You need $Self->{Config}->{Permission} permissions!",
+        return $LayoutObject->NoPermission(
+            Message    => Translatable("You need $Config->{Permission} permissions!"),
             WithHeader => 'yes',
         );
     }
 
-    my $Queue = $Self->{Config}->{Queue};
+    my $Queue = $Config->{Queue};
     if ($Queue) {
-        my $Success = $Self->{TicketObject}->TicketQueueSet(
-            Queue  => $Queue,
+        my $Success = $TicketObject->TicketQueueSet(
+            Queue    => $Queue,
             TicketID => $Self->{TicketID},
             UserID   => $Self->{UserID},
         );
         if ($Success) {
-            $Self->{TicketObject}->TicketLockSet(
+            $TicketObject->TicketLockSet(
                 TicketID => $Self->{TicketID},
                 Lock     => 'unlock',
                 UserID   => $Self->{UserID},
             );
         }
     }
-    return $Self->{LayoutObject}->Redirect( OP => $Self->{LastScreenOverview} );
+    return $LayoutObject->Redirect( OP => $Self->{LastScreenOverview} );
 }
 
 1;
