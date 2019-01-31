@@ -13,8 +13,9 @@
         <File Permission="660" Location="Kernel/Config/Files/XML/QuickDelete.xml"/>
         <File Permission="660" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
         <File Permission="660" Location="Kernel/Language/de_OTRSQuickDelete.pm"/>
+        <File Permission="660" Location="var/packagesetup/OTRSQuickDelete.pm"/>
     </Filelist>
-	<CodeInstall Type="post"><![CDATA[
+    <CodeInstall Type="post"><![CDATA[
         $Kernel::OM->Get('var::packagesetup::OTRSQuickDelete')->CodeInstall();
     ]]></CodeInstall>
     <CodeReinstall Type="post"><![CDATA[
