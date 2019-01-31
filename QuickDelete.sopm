@@ -2,17 +2,16 @@
 <otrs_package version="1.0">
     <Name>QuickDelete</Name>
     <Version>1.0.0</Version>
-    <Framework>3.1.x</Framework>
-    <Framework>3.2.x</Framework>
-    <Framework>3.3.x</Framework>
+    <Framework>6.0.x</Framework>
+    <PackageRequired Version="6.0.37">Znuny4OTRS-Repo</PackageRequired>
     <Vendor>Denny Bresch</Vendor>
     <URL>https://github.com/dennybresch/OTRS-QuickDelete</URL>
-    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 1, November 2013</License>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Description Lang="en">Enables quick delete in ticket action row.</Description>
     <Description Lang="de">Ermöglicht es ein Ticket in die Junk-Queue zu verschieben.</Description>
-	<Filelist>
-        <File Permission="644" Location="Kernel/Config/Files/QuickDelete.xml"/>
-        <File Permission="644" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
-		<File Permission="644" Location="Kernel/Language/de_AgentTicketQuickDelete.pm"/>
-	</Filelist>
+    <Filelist>
+        <File Permission="660" Location="Kernel/Config/Files/XML/QuickDelete.xml"/>
+        <File Permission="660" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
+        <File Permission="660" Location="Kernel/Language/de_OTRSQuickDelete.pm"/>
+    </Filelist>
 </otrs_package>
