@@ -1,4 +1,4 @@
-Quick Delete for OTRS 3.3
+Quick Delete for OTRS 6
 ========================
 
     **OTRS-Delete is not supported for OTRS 4**
