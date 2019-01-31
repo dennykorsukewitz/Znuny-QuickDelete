@@ -15,9 +15,9 @@ use warnings;
 use Kernel::Language qw(Translatable);
 
 our @ObjectDependencies = (
-	'Kernel::System::Ticket',
-	'Kernel::Output::HTML::Layout',
-	'Kernel::Config',
+    'Kernel::System::Ticket',
+    'Kernel::Output::HTML::Layout',
+    'Kernel::Config',
 );
 
 sub new {
@@ -75,7 +75,8 @@ sub Run {
                 Lock     => 'unlock',
                 UserID   => $Self->{UserID},
             );
-        } else {
+        }
+        else {
             return $LayoutObject->NoPermission(
                 Message    => Translatable('You dont have permissions to delete tickets.'),
                 WithHeader => 'yes',

@@ -2,7 +2,7 @@
 
 ## Verschiebung in der Junk-Queue
 
-Mit diesem Paket können Tickets mit einem Mausklick in die Junk-Queue verschoben werden.
+Mit diesem Paket können Tickets in der Ticketansicht mit einem Mausklick in die Junk-Queue verschoben werden.
 Falls Sie eine andere Junk-Queue definiert haben, kann diese auch in der [SysConfig](config.md) eingestellt werden.
 
 ## GenericAgent Job

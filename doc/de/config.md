@@ -1,6 +1,6 @@
 # Konfiguration
 
-Folgende Sysconfig Werte sind anpassbar:
+Folgende SysConfig Werte sind anpassbar:
 
 - `Ticket::Frontend::AgentTicketQuickDelete###Queue`
 - `Ticket::Frontend::AgentTicketQuickDelete###Permission`
