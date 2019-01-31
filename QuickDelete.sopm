@@ -14,4 +14,16 @@
         <File Permission="660" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
         <File Permission="660" Location="Kernel/Language/de_OTRSQuickDelete.pm"/>
     </Filelist>
+	<CodeInstall Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::OTRSQuickDelete')->CodeInstall();
+    ]]></CodeInstall>
+    <CodeReinstall Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::OTRSQuickDelete')->CodeReinstall();
+    ]]></CodeReinstall>
+    <CodeUpgrade Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::OTRSQuickDelete')->CodeUpgrade();
+    ]]></CodeUpgrade>
+    <CodeUninstall Type="pre"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::OTRSQuickDelete')->CodeUninstall();
+    ]]></CodeUninstall>
 </otrs_package>
