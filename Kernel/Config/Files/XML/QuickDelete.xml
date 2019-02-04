@@ -55,7 +55,7 @@
         <Description Translatable="1">Defines the default delete queue for quick delete.</Description>
         <Navigation>Frontend::Agent::Ticket::QuickDelete</Navigation>
         <Value>
-            <Item ValueType="String" ValueRegex="">Junk</Item>
+            <Item ValueType="Entity" ValueEntityType="Queue" ValueRegex="">Junk</Item>
         </Value>
     </Setting>
     <Setting Name="Ticket::Frontend::AgentTicketQuickDelete###Permission" Required="0" Valid="1">
