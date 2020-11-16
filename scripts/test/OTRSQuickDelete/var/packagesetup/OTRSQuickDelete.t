@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2019 Denny Bresch (dennybresch@gmail.com) (https://github.com/dennybresch)
+# Copyright (C) 2019 Denny Korsukéwitz (dennykorsukewitz@gmail.com) (https://github.com/dennykorsukewitz)
 # Copyright (C) 2012-2019 Znuny GmbH, http://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -18,7 +18,7 @@ use Kernel::System::VariableCheck qw(:all);
 
 $Kernel::OM->ObjectParamAdd(
     'Kernel::System::UnitTest::Helper' => {
-        RestoreDatabase            => 1,
+        RestoreDatabase => 1,
     },
 );
 

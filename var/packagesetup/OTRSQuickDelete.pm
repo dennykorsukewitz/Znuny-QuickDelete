@@ -1,6 +1,6 @@
 # --
 # Copyright (C) 2019 Gino Naumann, https://github.com/SynPrime
-# Copyright (C) 2019 Denny Bresch (dennybresch@gmail.com) (https://github.com/dennybresch)
+# Copyright (C) 2019 Denny Korsukéwitz (dennykorsukewitz@gmail.com) (https://github.com/dennykorsukewitz)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -144,7 +144,7 @@ sub CodeUninstall {
     my $GenericAgentObject = $Kernel::OM->Get('Kernel::System::GenericAgent');
 
     my $JobName = "QuickDelete";
-    my %Job = $GenericAgentObject->JobGet( Name => "$JobName" );
+    my %Job     = $GenericAgentObject->JobGet( Name => "$JobName" );
 
     return 1 if !%Job;
 
