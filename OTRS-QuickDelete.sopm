@@ -5,6 +5,7 @@
     <Framework>6.0.x</Framework>
     <PackageRequired Version="6.0.69">Znuny4OTRS-Repo</PackageRequired>
     <Vendor>Denny Korsukéwitz</Vendor>
+    <ChangeLog Version="6.0.1" Date="2019-01-30 16:02:19 +0100">Ported to OTRS 6.</ChangeLog>
     <URL>https://github.com/dennykorsukewitz/OTRS-QuickDelete</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Description Lang="en">Enables quick delete in ticket action row.</Description>
