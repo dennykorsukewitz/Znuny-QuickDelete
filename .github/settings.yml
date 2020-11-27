@@ -96,6 +96,10 @@ labels:
     color: '#b8e550'
     description:  This issue or pull request was verified.
 
+  - name: Verification
+    color: '#e8dd45'
+    description:  This issue or pull request needs a verification.
+
   - name: Progress
     color: '#AD8D43'
     description: in Progress.
