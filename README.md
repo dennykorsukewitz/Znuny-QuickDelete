@@ -13,7 +13,7 @@ This package enables a **"Quick Delete"** feature in ticket action row (where yo
 
 With it you can delete a ticket without having to leave a note.
 
-Further information can be found in the documentation ([en](doc/en/feature.md)|[de](doc/de/feature.md)).
+Further information can be found in the documentation ([en](doc/en/feature.md)/[de](doc/de/feature.md)).
 
 ## Installation
 
@@ -21,7 +21,7 @@ Download the [package](https://github.com/dennykorsukewitz/OTRS-QuickDelete/rele
 
 ## Configuration
 
-Check configuration file ([en](doc/en/config.md)|[de](doc/de/config.md)) for further information.
+Check configuration file ([en](doc/en/config.md)/[de](doc/de/config.md)) for further information.
 
 ## Download
 
