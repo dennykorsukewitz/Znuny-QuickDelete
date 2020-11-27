@@ -65,7 +65,7 @@ labels:
     description: Framework.
 
   - name: Refactoring
-    color: '#AA0033'
+    color: '#7F8C8D'
     description: Refactoring.
 
   - name: WontFix
@@ -77,15 +77,15 @@ labels:
     description: Unit Test.
 
   - name: OTRS 4
-    color: '#AA0033'
+    color: '#F781F3'
     description: OTRS 4 Framework.
 
   - name: OTRS 5
-    color: '#AA0033'
+    color: '#F781F3'
     description: OTRS 5 Framework.
 
   - name: OTRS 6
-    color: '#AA0033'
+    color: '#F781F3'
     description: OTRS 6 Framework.
 
   - name: Clarification
