@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>OTRS-QuickDelete</Name>
-    <Version>6.0.1</Version>
+    <Version>6.0.2</Version>
+    <ChangeLog Version="6.0.2" Date="2019-01-30 16:02:19 +0100">Tidied code.</ChangeLog>
     <ChangeLog Version="6.0.1" Date="2019-01-30 16:02:19 +0100">Ported to OTRS 6.</ChangeLog>
     <Framework>6.0.x</Framework>
-    <PackageRequired Version="6.0.69">Znuny4OTRS-Repo</PackageRequired>
     <Vendor>Denny Korsukéwitz</Vendor>
     <URL>https://github.com/dennykorsukewitz/OTRS-QuickDelete</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
