@@ -13,6 +13,7 @@
 	<Filelist>
         <File Permission="644" Location="Kernel/Config/Files/QuickDelete.xml"/>
         <File Permission="644" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
-		<File Permission="644" Location="Kernel/Language/de_AgentTicketQuickDelete.pm"/>
+		<File Permission="644" Location="Kernel/Language/de_OTRSQuickDelete.pm"/>
 	</Filelist>
 </otrs_package>
+
