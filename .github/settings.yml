@@ -76,6 +76,10 @@ labels:
     color: '#2ea7b2'
     description: Unit Test.
 
+  - name: OTRS 3
+    color: '#F781F3'
+    description: OTRS 3 Framework.
+
   - name: OTRS 4
     color: '#F781F3'
     description: OTRS 4 Framework.
