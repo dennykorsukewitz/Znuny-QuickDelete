@@ -1,5 +1,5 @@
 # --
-# Kernel/Language/de_AgentTicketQuickDelete.pm - translation file
+# Kernel/Language/de_OTRSQuickDelete.pm - translation file
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
