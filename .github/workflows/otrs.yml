@@ -21,6 +21,6 @@ jobs:
       - name: Check env
         run: env | sort
       - name: Set up Kernel/Config.pm
-        run: 'cp --no-clobber Kernel/Config.pm.dist Kernel/Config.pm'
+        run: 'cd /opt/otrs/ && cp --no-clobber Kernel/Config.pm.dist Kernel/Config.pm'
       - name: Set up Kernel/Config.pm
         run: 'bin/otrs.Console.pl Dev::UnitTest::Run --verbose --directory OTRSQuickDelete'
