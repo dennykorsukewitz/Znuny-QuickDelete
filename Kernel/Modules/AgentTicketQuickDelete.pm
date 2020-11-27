@@ -15,20 +15,16 @@ use warnings;
 sub new {
     my ( $Type, %Param ) = @_;
 
-    # allocate new hash for object
     my $Self = {%Param};
     bless( $Self, $Type );
 
-    # check needed objects
-    for (qw(ParamObject DBObject LayoutObject LogObject ConfigObject QueueObject TimeObject TicketObject)) {
-        if ( !$Self->{$_} ) {
+    for my $Needed (qw(ParamObject DBObject LayoutObject LogObject ConfigObject QueueObject TimeObject TicketObject)) {
+        if ( !$Self->{$Needed} ) {
             $Self->{LayoutObject}->FatalError( Message => "Got no $_!" );
         }
     }
 
-    # get config of frontend module
     $Self->{Config} = $Self->{ConfigObject}->Get("Ticket::Frontend::$Self->{Action}");
-
 
     return $Self;
 }
@@ -36,7 +32,6 @@ sub new {
 sub Run {
     my ( $Self, %Param ) = @_;
 
-    # check needed stuff
     if ( !$Self->{TicketID} ) {
         return $Self->{LayoutObject}->ErrorScreen(
             Message => 'No TicketID is given!',
@@ -62,7 +57,7 @@ sub Run {
     my $Queue = $Self->{Config}->{Queue};
     if ($Queue) {
         my $Success = $Self->{TicketObject}->TicketQueueSet(
-            Queue  => $Queue,
+            Queue    => $Queue,
             TicketID => $Self->{TicketID},
             UserID   => $Self->{UserID},
         );
@@ -77,4 +72,3 @@ sub Run {
     return $Self->{LayoutObject}->Redirect( OP => $Self->{LastScreenOverview} );
 }
 1;
-
