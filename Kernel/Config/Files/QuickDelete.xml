@@ -6,7 +6,7 @@
         <SubGroup>Frontend::Agent::Ticket::MenuModule</SubGroup>
         <Setting>
             <Hash>
-                <Item Key="Module">Kernel::Output::HTML::TicketMenuGeneric</Item>
+                <Item Key="Module">Kernel::Output::HTML::TicketMenu::Generic</Item>
                 <Item Key="Name">Quick Delete</Item>
                 <Item Key="Description" Translatable="1">Delete this ticket</Item>
                 <Item Key="Action">AgentTicketQuickDelete</Item>
@@ -22,7 +22,7 @@
         <SubGroup>Frontend::Agent::Ticket::MenuModulePre</SubGroup>
         <Setting>
             <Hash>
-                <Item Key="Module">Kernel::Output::HTML::TicketMenuGeneric</Item>
+                <Item Key="Module">Kernel::Output::HTML::TicketMenu::Generic</Item>
                 <Item Key="Name">Quick Delete</Item>
                 <Item Key="Action">AgentTicketQuickDelete</Item>
                 <Item Key="Description" Translatable="1">Delete this ticket</Item>
