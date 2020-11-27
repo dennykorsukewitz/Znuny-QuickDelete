@@ -23,8 +23,10 @@ sub Data {
     $Self->{Translation}->{'Defines the default delete queue for quick delete.'} = 'Definiert die Standardwert-Queue für die Funktion QuickDelete.';
 
     # Frontend
+    $Self->{Translation}->{'Ticket Delete'}      = 'Ticket löschen';
     $Self->{Translation}->{'Quick Delete'}       = 'Ticket löschen';
     $Self->{Translation}->{'Delete this ticket'} = 'Dieses Ticket löschen';
+
     $Self->{Translation}->{'You dont have permissions to delete tickets.'} = 'Sie haben nicht genügend Rechte um Tickets zu löschen.';
 
     return 1;
