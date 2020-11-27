@@ -66,7 +66,7 @@ labels:
 
   - name: Refactoring
     color: '#7F8C8D'
-    description: Refactoring.
+    description: Refactoring is needed.
 
   - name: WontFix
     color: '#000000'
@@ -94,7 +94,7 @@ labels:
 
   - name: Verified
     color: '#b8e550'
-    description:  This issue or pull request was verified.
+    description: This issue or pull request was verified.
 
   - name: Verification
     color: '#e8dd45'
@@ -102,5 +102,5 @@ labels:
 
   - name: Progress
     color: '#AD8D43'
-    description: in Progress.
+    description: This is in Progress.
 
