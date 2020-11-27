@@ -1,5 +1,4 @@
-OTRS-QuickDelete
-========================
+# OTRS-QuickDelete
 
 | GitHub | Package | Status | Versions |
 | ------ | ------ | ------ | ------ |
