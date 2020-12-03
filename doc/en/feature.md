@@ -7,5 +7,4 @@ If you have defined a different junk queue, it can also be set in [SysConfig](co
 
 ## GenericAgent Job
 
-Currently, a job for final ticket deletion must be added manually.
-In future versions of this package, a job to delete the junk tickets will be created.
+During installation a GenericAgent job `DK4OTRSQuickDelete` is created which deletes all tickets in the SysConfig `Ticket::Frontend::AgentTicketDK4OTRSQuickDelete####Queue` defined queue every day at 01:00.

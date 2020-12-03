@@ -11,7 +11,7 @@ Folgende SysConfig Werte sind anpassbar:
 
 Dieser Wert definiert die Queue in der zu löschende Tickets verschoben werden sollen.
 
-## Permission
+## Berechtigungen
 
 **Standardwert:** `move_into`
 
