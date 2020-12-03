@@ -3,13 +3,14 @@ repository:
   name: DK4OTRS-QuickDelete
 
   # A short description of the repository that will show up on GitHub
-  description: Enables quick deletion in the ticket action line.
+  description: This package enables a "Quick Delete" feature in ticket action row.
+
 
   # A URL with more information about the repository
   homepage: https://github.com/dennykorsukewitz/DK4OTRS-QuickDelete
 
   # A comma-separated list of topics to set on the repository
-  topics: otrs, DK4OTRS-QuickDelete
+  topics: otrs, DK4OTRS-QuickDelete, otrs-package, package
 
   # Either `true` to make the repository private, or `false` to make it public.
   private: false
