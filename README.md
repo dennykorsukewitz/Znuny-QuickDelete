@@ -9,7 +9,8 @@
 
 ## Feature List
 
-This package enables a **"Quick Delete"** feature in ticket action row (where you already have "note, pending, close, ...").
+This package enables a **"Quick Delete"** feature in ticket action row.
+
 
 With it you can delete a ticket without having to leave a note.
 
