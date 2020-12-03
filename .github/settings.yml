@@ -1,15 +1,15 @@
 repository:
   # The name of the repository. Changing this will rename the repository
-  name: OTRS-QuickDelete
+  name: DK4OTRS-QuickDelete
 
   # A short description of the repository that will show up on GitHub
   description: Enables quick deletion in the ticket action line.
 
   # A URL with more information about the repository
-  homepage: https://github.com/dennykorsukewitz/OTRS-QuickDelete
+  homepage: https://github.com/dennykorsukewitz/DK4OTRS-QuickDelete
 
   # A comma-separated list of topics to set on the repository
-  topics: otrs, otrs-quickdelete
+  topics: otrs, DK4OTRS-QuickDelete
 
   # Either `true` to make the repository private, or `false` to make it public.
   private: false

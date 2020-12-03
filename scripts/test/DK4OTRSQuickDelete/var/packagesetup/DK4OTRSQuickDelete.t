@@ -22,7 +22,7 @@ $Kernel::OM->ObjectParamAdd(
     },
 );
 
-my $PackageSetupObject = $Kernel::OM->Get('var::packagesetup::OTRSQuickDelete');
+my $PackageSetupObject = $Kernel::OM->Get('var::packagesetup::DK4OTRSQuickDelete');
 
 $Self->True(
     scalar $PackageSetupObject->CodeInstall(),
