@@ -2,8 +2,8 @@
 
 The following SysConfig values can be adjusted:
 
-- `Ticket::Frontend::AgentTicketQuickDelete####Queue`
-- `Ticket::Frontend::AgentTicketQuickDelete###Permission`
+- `Ticket::Frontend::AgentTicketDK4OTRSQuickDelete###Queue`
+- `Ticket::Frontend::AgentTicketDK4OTRSQuickDelete###Permission`
 
 ## Queue
 
