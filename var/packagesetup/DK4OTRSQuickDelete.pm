@@ -7,7 +7,7 @@
 # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 ## nofilter(TidyAll::Plugin::OTRS::Znuny4OTRS::Legal::AGPLValidator)
-package var::packagesetup::OTRSQuickDelete;
+package var::packagesetup::DK4OTRSQuickDelete;
 
 use strict;
 use warnings;
@@ -20,11 +20,11 @@ our @ObjectDependencies = (
 
 =head1 NAME
 
-var::packagesetup::OTRSQuickDelete - code to execute during package installation
+var::packagesetup::DK4OTRSQuickDelete - code to execute during package installation
 
 =head1 DESCRIPTION
 
-Functions for installing the OTRSQuickDelete package.
+Functions for installing the DK4OTRSQuickDelete package.
 
 =head1 PUBLIC INTERFACE
 
@@ -34,7 +34,7 @@ create an object
 
     use Kernel::System::ObjectManager;
     local $Kernel::OM = Kernel::System::ObjectManager->new();
-    my $CodeObject = $Kernel::OM->Get('var::packagesetup::OTRSQuickDelete');
+    my $CodeObject = $Kernel::OM->Get('var::packagesetup::DK4OTRSQuickDelete');
 
 =cut
 

@@ -1,7 +1,0 @@
-label-alias:
-  Bug:           'error'
-  Feature:       'enhancement'
-  Framework:     'system'
-  Refactoring:   'old'
-  Unit Test:     'test'
-  Clarification: '?'
