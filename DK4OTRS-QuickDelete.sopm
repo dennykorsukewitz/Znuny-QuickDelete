@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
-    <Name>OTRS-QuickDelete</Name>
-    <Version>3.3.2</Version>
+    <Name>DK4OTRS-QuickDelete</Name>
+    <Version>3.3.3</Version>
     <Framework>3.1.x</Framework>
     <Framework>3.2.x</Framework>
     <Framework>3.3.x</Framework>
     <Vendor>Denny Korsukéwitz</Vendor>
-    <URL>https://github.com/dennykorsukewitz/OTRS-QuickDelete</URL>
+    <URL>https://github.com/dennykorsukewitz/DK4OTRS-QuickDelete</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Description Lang="en">Enables quick delete in ticket action row.</Description>
     <Description Lang="de">Ermöglicht es ein Ticket in die Junk-Queue zu verschieben.</Description>
     <Filelist>
-        <File Permission="644" Location="Kernel/Config/Files/QuickDelete.xml"/>
-        <File Permission="644" Location="Kernel/Modules/AgentTicketQuickDelete.pm"/>
-        <File Permission="644" Location="Kernel/Language/de_OTRSQuickDelete.pm"/>
+        <File Permission="644" Location="Kernel/Config/Files/DK4OTRSQuickDelete.xml"/>
+        <File Permission="644" Location="Kernel/Language/de_DK4OTRSQuickDelete.pm"/>
+        <File Permission="644" Location="Kernel/Modules/AgentTicketDK4OTRSQuickDelete.pm"/>
     </Filelist>
+    <PackageMerge Name="OTRS-QuickDelete" TargetVersion="3.3.3"></PackageMerge>
 </otrs_package>
