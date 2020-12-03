@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>DK4OTRS-QuickDelete</Name>
-    <Version>6.0.2</Version>
+    <Version>6.0.3</Version>
     <ChangeLog Version="6.0.2" Date="2019-01-30 16:02:19 +0100">Tidied code.</ChangeLog>
     <ChangeLog Version="6.0.1" Date="2019-01-30 16:02:19 +0100">Ported to OTRS 6.</ChangeLog>
     <Framework>6.0.x</Framework>
@@ -29,5 +29,5 @@
     <CodeUninstall Type="pre"><![CDATA[
         $Kernel::OM->Get('var::packagesetup::DK4OTRSQuickDelete')->CodeUninstall();
     ]]></CodeUninstall>
-    <PackageMerge Name="OTRS-QuickDelete" TargetVersion="6.0.2"></PackageMerge>
+    <PackageMerge Name="OTRS-QuickDelete" TargetVersion="6.0.3"></PackageMerge>
 </otrs_package>
