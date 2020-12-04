@@ -8,8 +8,8 @@ env:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
     name: Publish Document
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -22,5 +22,5 @@ jobs:
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
-          name: 'document.pdf'
+          name: 'DK4OTRS-QuickDelete.pdf'
           path: ${{ steps.publish-document.outputs.pdf }}
