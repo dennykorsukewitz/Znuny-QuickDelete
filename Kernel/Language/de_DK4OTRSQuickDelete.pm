@@ -1,5 +1,6 @@
 # --
 # Kernel/Language/de_DK4OTRSQuickDelete.pm - translation file
+# Copyright (C) 2019 Denny Korsukéwitz (dennykorsukewitz@gmail.com) (https://github.com/dennykorsukewitz)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
