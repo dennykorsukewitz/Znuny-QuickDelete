@@ -23,5 +23,5 @@ jobs:
           build_html: false
       - uses: actions/upload-artifact@v1
         with:
-          name: docs
+          name: 'DK4OTRS-QuickDelete.pdf'
           path: pdfs
