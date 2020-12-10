@@ -1,0 +1,42 @@
+name: PDF
+
+on:
+  push:
+    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
+    paths:
+      - 'doc/de/*.md'
+      - 'doc/en/*.md'
+
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+
+jobs:
+  pdf:
+    name: Create PDF Documents
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create PDF Document (de)
+        uses: shrink/actions-document-publish@v1
+        id: de-document
+        with:
+          sources: 'doc/de/front.md doc/de/feature.md doc/de/config.md'
+      - name: Upload Document (de)
+        uses: actions/upload-artifact@v2
+        id: upload-de-document
+        with:
+          name: 'DK4OTRS-QuickDeleteDE.pdf'
+          path: ${{ steps.de-document.outputs.pdf }}
+
+      - name: Create PDF Document (en)
+        uses: shrink/actions-document-publish@v1
+        id: en-document
+        with:
+          sources: 'doc/de/front.md doc/en/feature.md doc/en/config.md'
+      - name: Upload Document (en)
+        uses: actions/upload-artifact@v2
+        id: upload-en-document
+        with:
+          name: 'DK4OTRS-QuickDeleteEN.pdf'
+          path: ${{ steps.en-document.outputs.pdf }}
