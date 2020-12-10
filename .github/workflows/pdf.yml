@@ -26,7 +26,7 @@ jobs:
         uses: actions/upload-artifact@v2
         id: upload-de-document
         with:
-          name: 'DK4OTRS-QuickDelete.pdf'
+          name: 'DK4OTRS-QuickDeleteDE.pdf'
           path: ${{ steps.de-document.outputs.pdf }}
 
       - name: Create PDF Document (en)
@@ -38,5 +38,5 @@ jobs:
         uses: actions/upload-artifact@v2
         id: upload-en-document
         with:
-          name: 'DK4OTRS-QuickDelete.pdf'
+          name: 'DK4OTRS-QuickDeleteEN.pdf'
           path: ${{ steps.en-document.outputs.pdf }}
