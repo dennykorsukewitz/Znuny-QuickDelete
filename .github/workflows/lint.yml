@@ -15,6 +15,7 @@ jobs:
           fetch-depth: 0
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/}
+      - name: Branch name
         run: echo running on branch ${GITHUB_HEAD_REF}
       - name: Lint Code Base
         uses: github/super-linter@v3
