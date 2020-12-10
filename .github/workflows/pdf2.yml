@@ -27,4 +27,4 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: 'DK4OTRS-QuickDelete.pdf'
-          path: doc/de/pdf
+          path: doc/de/
