@@ -25,7 +25,7 @@ jobs:
       - name: Check perl version
         run: perl -V
       - name: Show Kernel Files (delete me)
-        run: 'cd ${OTRS_ROOT} && cd Kernel && ls -alih'
+        run: 'cd /opt/otrs/Kernel && ls -alih'
       - name: Set up Kernel/Config.pm
         run: 'cd ${OTRS_ROOT} && cp --no-clobber Kernel/Config.pm.dist Kernel/Config.pm'
       - name: Run UnitTests
