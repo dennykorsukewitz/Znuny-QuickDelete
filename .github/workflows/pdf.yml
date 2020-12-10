@@ -1,4 +1,4 @@
-name: Upload DE Document as Artifact
+name: Create PDF Documents
 
 on:
   push:
@@ -8,19 +8,49 @@ env:
 
 jobs:
   publish:
-    name: Publish Document
+    name: Push Document
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Create PDF Document (de)
         uses: shrink/actions-document-publish@v1
-        id: publish-document
+        id: de-document
         with:
           sources: 'doc/de/feature.md doc/de/config.md'
-      - name: Upload Document
+      - name: Upload Document (de)
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
           name: 'DK4OTRS-QuickDelete.pdf'
           path: ${{ steps.publish-document.outputs.pdf }}
+
+      - name: Download Document (de)
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          # Optional, GitHub token
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          # Required, workflow file name or ID
+          workflow: pdf.yml
+          # Optional, the conclusion of a completed workflow to search for
+          # Can be one of:
+          # "failure", "success", "neutral", "cancelled", "skipped", "timed_out", "action_required"
+          # Ignores conclusion by default (thus using the most recent completed run when no other option is specified, regardless of conclusion)
+          workflow_conclusion: success
+          # Optional, will get head commit SHA
+          pr: ${{github.event.pull_request.number}}
+          # Optional, no need to specify if PR is
+          commit: ${{github.event.pull_request.head.sha}}
+          # Optional, will use the branch
+          branch: develop
+          # # Optional, will use specified workflow run
+          # run_id: 1122334455
+          # Optional, uploaded artifact name,
+          # will download all artifacts if not specified
+          # and extract them in respective subdirectories
+          # https://github.com/actions/download-artifact#download-all-artifacts
+          name: DK4OTRS-QuickDelete.pdf
+          # Optional, directory where to extract artifact
+          path: doc/de/
+          # Optional, defaults to current repo
+          repo: ${{github.repository}}
