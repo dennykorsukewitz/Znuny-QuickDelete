@@ -1,7 +1,7 @@
 <p style="text-align: left;">
     <h3 style="text-align: left;">Denny Korsukéwitz 4 OpenSource</h3>
 </p>
-<p style="padding-top: 400px">
+<p style="padding-top: 350px">
     <br>
 </p>
 <h1 style="text-align: center;">
