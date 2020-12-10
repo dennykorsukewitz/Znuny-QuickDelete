@@ -11,6 +11,6 @@ DK4OTRS-QuickDelete
 <h1 style="text-align: center;">
 OTRS 6
 </h1>
-<p style="padding-top: 400px">
+<p style="padding-top: 500px">
     <br>
 </p>
