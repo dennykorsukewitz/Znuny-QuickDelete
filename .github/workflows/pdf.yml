@@ -24,7 +24,7 @@ jobs:
           sources: 'doc/de/feature.md doc/de/config.md'
       - name: Upload Document (de)
         uses: actions/upload-artifact@v2
-        id: upload-document
+        id: upload-de-document
         with:
           name: 'DK4OTRS-QuickDelete.pdf'
           path: ${{ steps.de-document.outputs.pdf }}
@@ -36,7 +36,7 @@ jobs:
           sources: 'doc/en/feature.md doc/en/config.md'
       - name: Upload Document (en)
         uses: actions/upload-artifact@v2
-        id: upload-document
+        id: upload-en-document
         with:
           name: 'DK4OTRS-Quickenlete.pdf'
           path: ${{ steps.en-document.outputs.pdf }}
