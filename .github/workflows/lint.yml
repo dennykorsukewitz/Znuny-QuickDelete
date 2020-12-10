@@ -17,5 +17,5 @@ jobs:
         uses: github/super-linter@v3
         env:
           VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: ${{ GITHUB_HEAD_REF }}
+          DEFAULT_BRANCH: ${{ secrets.GITHUB_HEAD_REF }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
