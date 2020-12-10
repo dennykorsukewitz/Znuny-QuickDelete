@@ -2,10 +2,10 @@ name: PDF
 
 on:
   push:
-    # # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
-    # paths:
-    #   - 'doc/de/*.md'
-    #   - 'doc/en/*.md'
+    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
+    paths:
+      - 'doc/de/*.md'
+      - 'doc/en/*.md'
 
 env:
   GITHUB_TOKEN: ${{ github.token }}
