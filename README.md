@@ -1,4 +1,4 @@
-# OTRS-QuickDelete
+# DK4OTRS-QuickDelete
 
 | GitHub | Package | Status | Versions |
 | ------ | ------ | ------ | ------ |
