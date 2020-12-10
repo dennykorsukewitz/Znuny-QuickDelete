@@ -27,7 +27,7 @@ jobs:
         id: upload-de-document
         with:
           name: 'DK4OTRS-QuickDelete.pdf'
-          path: ${{ steps.de-document.outputs.pdf }}
+          path: doc/de/${{ steps.de-document.outputs.pdf }}
 
       - name: Create PDF Document (en)
         uses: shrink/actions-document-publish@v1
@@ -39,7 +39,7 @@ jobs:
         id: upload-en-document
         with:
           name: 'DK4OTRS-Quickenlete.pdf'
-          path: ${{ steps.en-document.outputs.pdf }}
+          path: doc/en/${{ steps.en-document.outputs.pdf }}
 
       - name: Download Document (de)
         uses: dawidd6/action-download-artifact@v2
