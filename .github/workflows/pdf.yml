@@ -1,4 +1,4 @@
-name: Create PDF Documents
+name: PDF
 
 on:
   push:
@@ -7,8 +7,8 @@ env:
   GITHUB_TOKEN: ${{ github.token }}
 
 jobs:
-  publish:
-    name: Push Document
+  pdf:
+    name: Create PDF Documents
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,6 +24,18 @@ jobs:
         with:
           name: 'DK4OTRS-QuickDelete.pdf'
           path: ${{ steps.de-document.outputs.pdf }}
+
+      - name: Create PDF Document (en)
+        uses: shrink/actions-document-publish@v1
+        id: en-document
+        with:
+          sources: 'doc/en/feature.md doc/en/config.md'
+      - name: Upload Document (en)
+        uses: actions/upload-artifact@v2
+        id: upload-document
+        with:
+          name: 'DK4OTRS-Quickenlete.pdf'
+          path: doc/en/${{ steps.en-document.outputs.pdf }}
 
       - name: Download Document (de)
         uses: dawidd6/action-download-artifact@v2
