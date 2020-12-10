@@ -1,34 +1,34 @@
----
-name: OTRS
-on:
-  push:
-  pull_request:
+# ---
+# name: OTRS
+# on:
+#   push:
+#   pull_request:
 
-jobs:
-  OTRS:
-    name: UnitTest
-    runs-on: ubuntu-latest
-    container:
-      image: 'juanluisbaptiste/otrs:latest'
-      options: --user root
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Branch Name
-        run: echo running on branch ${GITHUB_REF##*/}
-      - name: OTRS Version
-        run: echo running on branch ${OTRS_VERSION}
-      - name: Check env
-        run: env | sort
-      - name: Check perl version
-        run: perl -V
-      - name: PWD
-        run: pwd
-      - name: Show Kernel Files (delete me)
-        run: cd /opt/otrs/Kernel && ls -alih
-      - name: Set up Kernel/Config.pm
-        run: cd ${OTRS_ROOT} && cp --no-clobber Kernel/Config.pm.dist Kernel/Config.pm
-      - name: Run UnitTests
-        run: bin/otrs.Console.pl Dev::UnitTest::Run --verbose --directory DK4OTRSQuickDelete
+# jobs:
+#   OTRS:
+#     name: UnitTest
+#     runs-on: ubuntu-latest
+#     container:
+#       image: 'juanluisbaptiste/otrs:latest'
+#       options: --user root
+#     steps:
+#       - name: Checkout Code
+#         uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+#       - name: Branch Name
+#         run: echo running on branch ${GITHUB_REF##*/}
+#       - name: OTRS Version
+#         run: echo running on branch ${OTRS_VERSION}
+#       - name: Check env
+#         run: env | sort
+#       - name: Check perl version
+#         run: perl -V
+#       - name: PWD
+#         run: pwd
+#       - name: Show Kernel Files (delete me)
+#         run: cd /opt/otrs/Kernel && ls -alih
+#       - name: Set up Kernel/Config.pm
+#         run: cd ${OTRS_ROOT} && cp --no-clobber Kernel/Config.pm.dist Kernel/Config.pm
+#       - name: Run UnitTests
+#         run: bin/otrs.Console.pl Dev::UnitTest::Run --verbose --directory DK4OTRSQuickDelete

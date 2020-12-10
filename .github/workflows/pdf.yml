@@ -1,26 +1,26 @@
-# name: Upload DE Document as Artifact
+name: Upload DE Document as Artifact
 
-# on:
-#   push:
+on:
+  push:
 
-# env:
-#   GITHUB_TOKEN: ${{ github.token }}
+env:
+  GITHUB_TOKEN: ${{ github.token }}
 
-# jobs:
-#   publish:
-#     name: Publish Document
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v2
-#       - name: Publish PDF Document
-#         uses: shrink/actions-document-publish@v1
-#         id: publish-document
-#         with:
-#           sources: 'doc/de/*.md'
-#       - name: Upload Document
-#         uses: actions/upload-artifact@v2
-#         id: upload-document
-#         with:
-#           name: 'DK4OTRS-QuickDelete.pdf'
-#           path: ${{ steps.publish-document.outputs.pdf }}
+jobs:
+  publish:
+    name: Publish Document
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Publish PDF Document
+        uses: shrink/actions-document-publish@v1
+        id: publish-document
+        with:
+          sources: 'doc/de/*.md'
+      - name: Upload Document
+        uses: actions/upload-artifact@v2
+        id: upload-document
+        with:
+          name: 'DK4OTRS-QuickDelete.pdf'
+          path: ${{ steps.publish-document.outputs.pdf }}
