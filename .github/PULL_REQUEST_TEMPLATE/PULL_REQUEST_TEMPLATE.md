@@ -17,4 +17,3 @@ A clear and concise description of what happened (the issue/bug/problem).
 ### Changes
 
 A clear and concise description of what you changed.
-
