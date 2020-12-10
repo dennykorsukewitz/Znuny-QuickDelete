@@ -1,30 +1,30 @@
-name: Docs to PDF
-# This workflow is triggered on pushes to the repository.
-on:
-  push:
-    # # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
-    # paths:
-    #   - 'doc/de/**'
-    #   - 'doc/en/**'
+# name: Docs to PDF
+# # This workflow is triggered on pushes to the repository.
+# on:
+#   push:
+#     # # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
+#     # paths:
+#     #   - 'doc/de/**'
+#     #   - 'doc/en/**'
 
-jobs:
-  converttopdf:
-    name: Build PDF
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Create PDF Document (de)
-        uses: baileyjm02/markdown-to-pdf@v1.0.1
-        with:
-          input_dir: doc/de/
-          output_dir: pdfs
-          images_dir: doc/de/images
-          # for example <img src="./images/file-name.png">
-          images_path: ./doc/de/images
-          # Default is true, can set to false to only get PDF files
-          build_html: false
-      - uses: actions/upload-artifact@v1
-        with:
-          name: 'DK4OTRS-QuickDelete.pdf'
-          path: doc/de/
+# jobs:
+#   converttopdf:
+#     name: Build PDF
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#       - name: Create PDF Document (de)
+#         uses: baileyjm02/markdown-to-pdf@v1.0.1
+#         with:
+#           input_dir: doc/de/
+#           output_dir: pdfs
+#           images_dir: doc/de/images
+#           # for example <img src="./images/file-name.png">
+#           images_path: ./doc/de/images
+#           # Default is true, can set to false to only get PDF files
+#           build_html: false
+#       - uses: actions/upload-artifact@v1
+#         with:
+#           name: 'DK4OTRS-QuickDelete.pdf'
+#           path: doc/de/

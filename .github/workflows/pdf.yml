@@ -23,7 +23,7 @@ jobs:
         id: upload-document
         with:
           name: 'DK4OTRS-QuickDelete.pdf'
-          path: ${{ steps.publish-document.outputs.pdf }}
+          path: ${{ steps.de-document.outputs.pdf }}
 
       - name: Download Document (de)
         uses: dawidd6/action-download-artifact@v2
