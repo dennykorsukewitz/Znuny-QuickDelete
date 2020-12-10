@@ -24,9 +24,11 @@ jobs:
         run: env | sort
       - name: Check perl version
         run: perl -V
+      - name: PWD
+        run: pwd
       - name: Show Kernel Files (delete me)
-        run: 'cd /opt/otrs/Kernel && ls -alih'
+        run: cd /opt/otrs/Kernel && ls -alih
       - name: Set up Kernel/Config.pm
-        run: 'cd ${OTRS_ROOT} && cp --no-clobber Kernel/Config.pm.dist Kernel/Config.pm'
+        run: cd ${OTRS_ROOT} && cp --no-clobber Kernel/Config.pm.dist Kernel/Config.pm
       - name: Run UnitTests
-        run: 'bin/otrs.Console.pl Dev::UnitTest::Run --verbose --directory DK4OTRSQuickDelete'
+        run: bin/otrs.Console.pl Dev::UnitTest::Run --verbose --directory DK4OTRSQuickDelete
