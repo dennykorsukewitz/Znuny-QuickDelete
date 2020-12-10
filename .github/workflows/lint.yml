@@ -1,25 +1,23 @@
----
-name: Lint Code Base
-on:
-  push:
-  pull_request:
+# ---
+# name: Lint Code Base
+# on:
+#   push:
+#   pull_request:
 
-jobs:
-  build:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
-      - name: Branch name
-        run: echo running on branch ${GITHUB_HEAD_REF}
-      - name: Lint Code Base
-        uses: github/super-linter@v3
-        env:
-          VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: ${{ secrets.GITHUB_HEAD_REF }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#   build:
+#     name: Lint
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Code
+#         uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+#       - name: Branch Name
+#         run: echo running on branch ${GITHUB_REF##*/}
+#       - name: Lint Code Base
+#         uses: github/super-linter@v3
+#         env:
+#           VALIDATE_ALL_CODEBASE: true
+#           DEFAULT_BRANCH: ${GITHUB_REF##*/}
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
