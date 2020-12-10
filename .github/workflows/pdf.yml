@@ -2,6 +2,10 @@ name: PDF
 
 on:
   push:
+    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
+    paths:
+      - 'doc/de/*.md'
+      - 'doc/en/*.md'
 
 env:
   GITHUB_TOKEN: ${{ github.token }}
@@ -35,7 +39,7 @@ jobs:
         id: upload-document
         with:
           name: 'DK4OTRS-Quickenlete.pdf'
-          path: doc/en/${{ steps.en-document.outputs.pdf }}
+          path: ${{ steps.en-document.outputs.pdf }}
 
       - name: Download Document (de)
         uses: dawidd6/action-download-artifact@v2
