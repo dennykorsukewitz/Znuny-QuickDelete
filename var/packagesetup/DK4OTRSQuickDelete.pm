@@ -7,6 +7,7 @@
 # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 ## nofilter(TidyAll::Plugin::OTRS::Znuny4OTRS::Legal::AGPLValidator)
+
 package var::packagesetup::DK4OTRSQuickDelete;
 
 use strict;
@@ -62,9 +63,9 @@ sub CodeInstall {
     my $ConfigObject       = $Kernel::OM->Get('Kernel::Config');
     my $QueueObject        = $Kernel::OM->Get('Kernel::System::Queue');
 
-    my $Config = $ConfigObject->Get('Ticket::Frontend::AgentTicketQuickDelete');
+    my $Config = $ConfigObject->Get('Ticket::Frontend::AgentTicketDK4OTRSQuickDelete');
 
-    my $JobName = 'QuickDelete';
+    my $JobName = 'DK4OTRSQuickDelete';
     my $QueueID = $QueueObject->QueueLookup( Queue => $Config->{Queue} );
     return 1 if !$QueueID;
 
@@ -72,7 +73,7 @@ sub CodeInstall {
     return 1 if $JobList{$JobName};
 
     $GenericAgentObject->JobAdd(
-        Name    => 'QuickDelete',
+        Name    => $JobName,
         UserID  => 1,
         ValidID => 1,
         Data    => {
@@ -143,13 +144,13 @@ sub CodeUninstall {
 
     my $GenericAgentObject = $Kernel::OM->Get('Kernel::System::GenericAgent');
 
-    my $JobName = "QuickDelete";
+    my $JobName = "DK4OTRSQuickDelete";
     my %Job     = $GenericAgentObject->JobGet( Name => "$JobName" );
 
     return 1 if !%Job;
 
     $GenericAgentObject->JobDelete(
-        Name   => "$JobName",
+        Name   => $JobName,
         UserID => 1,
     );
 

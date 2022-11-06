@@ -11,7 +11,7 @@ The following SysConfig values can be adjusted:
 
 This value defines the queue in which tickets should be moved to be deleted.
 
-## permission
+## Permission
 
 **default value:** 'move_into
 
