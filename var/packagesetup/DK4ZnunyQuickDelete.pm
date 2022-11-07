@@ -8,7 +8,7 @@
 # --
 ## nofilter(TidyAll::Plugin::OTRS::Znuny4OTRS::Legal::AGPLValidator)
 
-package var::packagesetup::DK4OTRSQuickDelete;
+package var::packagesetup::DK4ZnunyQuickDelete;
 
 use strict;
 use warnings;
@@ -21,11 +21,11 @@ our @ObjectDependencies = (
 
 =head1 NAME
 
-var::packagesetup::DK4OTRSQuickDelete - code to execute during package installation
+var::packagesetup::DK4ZnunyQuickDelete - code to execute during package installation
 
 =head1 DESCRIPTION
 
-Functions for installing the DK4OTRSQuickDelete package.
+Functions for installing the DK4ZnunyQuickDelete package.
 
 =head1 PUBLIC INTERFACE
 
@@ -35,7 +35,7 @@ create an object
 
     use Kernel::System::ObjectManager;
     local $Kernel::OM = Kernel::System::ObjectManager->new();
-    my $CodeObject = $Kernel::OM->Get('var::packagesetup::DK4OTRSQuickDelete');
+    my $CodeObject = $Kernel::OM->Get('var::packagesetup::DK4ZnunyQuickDelete');
 
 =cut
 
@@ -63,9 +63,9 @@ sub CodeInstall {
     my $ConfigObject       = $Kernel::OM->Get('Kernel::Config');
     my $QueueObject        = $Kernel::OM->Get('Kernel::System::Queue');
 
-    my $Config = $ConfigObject->Get('Ticket::Frontend::AgentTicketDK4OTRSQuickDelete');
+    my $Config = $ConfigObject->Get('Ticket::Frontend::AgentTicketDK4ZnunyQuickDelete');
 
-    my $JobName = 'DK4OTRSQuickDelete';
+    my $JobName = 'DK4ZnunyQuickDelete';
     my $QueueID = $QueueObject->QueueLookup( Queue => $Config->{Queue} );
     return 1 if !$QueueID;
 
@@ -144,7 +144,7 @@ sub CodeUninstall {
 
     my $GenericAgentObject = $Kernel::OM->Get('Kernel::System::GenericAgent');
 
-    my $JobName = "DK4OTRSQuickDelete";
+    my $JobName = "DK4ZnunyQuickDelete";
     my %Job     = $GenericAgentObject->JobGet( Name => "$JobName" );
 
     return 1 if !%Job;

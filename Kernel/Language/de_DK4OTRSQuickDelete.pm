@@ -1,5 +1,5 @@
 # --
-# Kernel/Language/de_DK4OTRSQuickDelete.pm - translation file
+# Kernel/Language/de_DK4ZnunyQuickDelete.pm - translation file
 # Copyright (C) 2019 Denny Korsukéwitz (dennykorsukewitz@gmail.com) (https://github.com/dennykorsukewitz)
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
@@ -7,7 +7,7 @@
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-package Kernel::Language::de_DK4OTRSQuickDelete;
+package Kernel::Language::de_DK4ZnunyQuickDelete;
 
 use strict;
 use warnings;

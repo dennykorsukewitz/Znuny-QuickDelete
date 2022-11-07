@@ -1,16 +1,15 @@
 repository:
   # The name of the repository. Changing this will rename the repository
-  name: DK4OTRS-QuickDelete
+  name: DK4Znuny-QuickDelete
 
   # A short description of the repository that will show up on GitHub
   description: This package enables a "Quick Delete" feature in ticket action row.
 
-
   # A URL with more information about the repository
-  homepage: https://github.com/dennykorsukewitz/DK4OTRS-QuickDelete
+  homepage: https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete
 
   # A comma-separated list of topics to set on the repository
-  topics: otrs, DK4OTRS-QuickDelete, otrs-package, package
+  topics: otrs, znuny, DK4Znuny-QuickDelete, otrs-package, znuny-package, package
 
   # Either `true` to make the repository private, or `false` to make it public.
   private: false
@@ -20,7 +19,7 @@ repository:
 
   # Either `true` to enable projects for this repository, or `false` to disable them.
   # If projects are disabled for the organization, passing `true` will cause an API error.
-  has_projects: true
+  has_projects: false
 
   # Either `true` to enable the wiki for this repository, `false` to disable it.
   has_wiki: false
@@ -45,6 +44,26 @@ repository:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: OTRS 3
+    color: '#F781F3'
+    description: OTRS 3 Framework.
+
+  - name: OTRS 4
+    color: '#F781F3'
+    description: OTRS 4 Framework.
+
+  - name: OTRS 5
+    color: '#F781F3'
+    description: OTRS 5 Framework.
+
+  - name: OTRS 6
+    color: '#F781F3'
+    description: OTRS 6 Framework.
+
+  - name: Znuny 6
+    color: '#ff9b00'
+    description: Znuny 6 Framework.
+
   - name: Bug
     color: '#FF0000'
     description: An issue with the system.
@@ -77,22 +96,6 @@ labels:
     color: '#2ea7b2'
     description: Unit Test.
 
-  - name: OTRS 3
-    color: '#F781F3'
-    description: OTRS 3 Framework.
-
-  - name: OTRS 4
-    color: '#F781F3'
-    description: OTRS 4 Framework.
-
-  - name: OTRS 5
-    color: '#F781F3'
-    description: OTRS 5 Framework.
-
-  - name: OTRS 6
-    color: '#F781F3'
-    description: OTRS 6 Framework.
-
   - name: Clarification
     color: '#3399FF'
     description: Clarification of the current situation.
@@ -103,9 +106,8 @@ labels:
 
   - name: Verification
     color: '#e8dd45'
-    description:  This issue or pull request needs a verification.
+    description: This issue or pull request needs a verification.
 
   - name: Progress
     color: '#AD8D43'
     description: This is in Progress.
-

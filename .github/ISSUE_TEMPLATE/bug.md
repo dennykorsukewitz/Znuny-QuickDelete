@@ -31,7 +31,7 @@ If applicable, add screenshots to help explain your problem.
 
 - OS: [e.g. Windows, MacOS, Linux]
 - Browser: [e. g. Chrome, Firefox, Safari]
-- OTRS version [e. g. 6.0.15]
+- Znuny version [e. g. 6.0.15]
 
 ### Additional information
 
