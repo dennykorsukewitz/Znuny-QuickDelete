@@ -21,10 +21,13 @@ jobs:
         with:
           repository: dennykorsukewitz/DK4
           path: DK4
+
       - name: Branch Name
         run: echo running on branch "${GITHUB_REF##*/}"
-      - name: copy linters configs
-        run: cp -Rf DK4/linter/* package/.github/linters/
+
+      - name: Copy linters configs
+        run: cp -Rf "$GITHUB_WORKSPACE"/DK4/linter/* "$GITHUB_WORKSPACE"/package/.github/linters/
+
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
