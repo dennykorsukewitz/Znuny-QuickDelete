@@ -1,5 +1,5 @@
 ---
-name: ZnunyCodePolicy
+name: CodePolicy
 
 # Controls when the action will run.
 on:

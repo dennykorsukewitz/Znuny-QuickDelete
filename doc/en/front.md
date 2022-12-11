@@ -9,7 +9,7 @@ DK4Znuny-QuickDelete
 </h1>
 
 <h1 style="text-align: center;">
-Znuny 6
+Znuny 6.4
 </h1>
 <p style="padding-top: 520px">
     <br>

@@ -56,7 +56,10 @@ jobs:
         run: znuny/.github/workflows/ci/dependencies.sh
 
       - name: Setup Znuny
-        run: znuny/.github/workflows/ci/setup.sh
+        run: |
+          ln -sf "$PWD" /opt/otrs
+          cd /opt/otrs
+          znuny/.github/workflows/ci/setup.sh
 
       - name: Link Package
         run: |
