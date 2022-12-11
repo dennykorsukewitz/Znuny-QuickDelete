@@ -10,9 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          path: package
       - name: Check out DK4
         uses: actions/checkout@v3
         env:
@@ -22,12 +23,12 @@ jobs:
           path: DK4
       - name: Branch Name
         run: echo running on branch "${GITHUB_REF##*/}"
+      - name: copy linters configs
+        run: cp -Rf DK4/linter/* package/.github/linters/
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
-          LINTER_RULES_PATH: DK4/linters
-          MARKDOWN_CONFIG_FILE: .markdownlint.yaml
           DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

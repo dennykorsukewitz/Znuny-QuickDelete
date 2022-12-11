@@ -74,7 +74,7 @@ jobs:
 
           # MySQL
           if [ "$DB" == "mysql" ]; then
-              .github/workflows/ci/config-mysql.sh
+              znuny/.github/workflows/ci/config-mysql.sh
           fi
 
           # run needed scripts
@@ -84,7 +84,7 @@ jobs:
 
           # prepare Selenium tests
           if [[ "$GITHUB_JOB" =~ ^Selenium ]]; then
-              .github/workflows/ci/config-selenium.sh
+              znuny/.github/workflows/ci/config-selenium.sh
           fi
 
           if [ "$DB" ]; then

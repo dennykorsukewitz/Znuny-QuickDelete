@@ -16,14 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Create PDF Document (de)
         uses: shrink/actions-document-publish@v1
         id: de-document
         with:
           sources: 'doc/de/front.md doc/de/feature.md doc/de/config.md'
       - name: Upload Document (de)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         id: upload-de-document
         with:
           name: 'DK4Znuny-QuickDeleteDE.pdf'
@@ -35,7 +35,7 @@ jobs:
         with:
           sources: 'doc/de/front.md doc/en/feature.md doc/en/config.md'
       - name: Upload Document (en)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         id: upload-en-document
         with:
           name: 'DK4Znuny-QuickDeleteEN.pdf'
