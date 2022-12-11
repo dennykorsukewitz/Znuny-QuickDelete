@@ -14,8 +14,8 @@ use strict;
 use warnings;
 
 our @ObjectDependencies = (
-    'Kernel::System::GenericAgent',
     'Kernel::Config',
+    'Kernel::System::GenericAgent',
     'Kernel::System::Queue',
 );
 
