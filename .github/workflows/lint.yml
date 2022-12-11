@@ -20,6 +20,7 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
-          MARKDOWN_CONFIG_FILE: https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
+          LINTER_RULES_PATH: https://github.com/DavidAnson/markdownlint/blob/main/schema/
+          MARKDOWN_CONFIG_FILE: .markdownlint.yaml
           DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
