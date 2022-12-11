@@ -14,7 +14,13 @@
 
 | Versions | Status |
 | ------ | ------ |
-| ![GitHub label version](https://img.shields.io/github/labels/dennykorsukewitz/DK4Znuny-QuickDelete/Znuny%206.4) | ![GitHub Workflow Lint](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/Lint%20Code%20Base/rel-6_4?style=flat&label=Lint) ![GitHub Workflow PDF](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/PDF/rel-6_4?style=flat&label=PDF)  [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/DK4Znuny-QuickDelete/6.0.3/rel-6_4)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/compare/6.4.1...rel-6_4) |
+| ![GitHub label version](https://img.shields.io/github/labels/dennykorsukewitz/DK4Znuny-QuickDelete/Znuny%206.4) | ![GitHub Workflow Lint](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/Lint%20Code%20Base/rel-6_4?style=flat&label=Lint)
+[![codepolicy](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/actions/workflows/codepolicy.yml/badge.svg)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/actions/workflows/codepolicy.yml)
+
+[![unittest](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/actions/workflows/unittest.yml/badge.svg
+)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/actions/workflows/unittest.yml)
+
+![GitHub Workflow PDF](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/PDF/rel-6_4?style=flat&label=PDF)  [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/DK4Znuny-QuickDelete/6.0.3/rel-6_4)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/compare/6.4.1...rel-6_4) |
 | ![GitHub label version](https://img.shields.io/github/labels/dennykorsukewitz/DK4Znuny-QuickDelete/OTRS%206) | ![GitHub Workflow Lint](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/Lint%20Code%20Base/rel-6_0?style=flat&label=Lint) ![GitHub Workflow PDF](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/PDF/rel-6_0?style=flat&label=PDF)  [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/DK4Znuny-QuickDelete/6.0.3/rel-6_0)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/compare/6.0.3...rel-6_0) |
 | ![GitHub label version](https://img.shields.io/github/labels/dennykorsukewitz/DK4Znuny-QuickDelete/OTRS%205) | ![GitHub Workflow Lint](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/Lint%20Code%20Base/rel-5_0?style=flat&label=Lint) [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/DK4Znuny-QuickDelete/5.0.2/rel-5_0)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/compare/5.0.2...rel-5_0)  |
 | ![GitHub label version](https://img.shields.io/github/labels/dennykorsukewitz/DK4Znuny-QuickDelete/OTRS%204)  | ![GitHub Workflow Lint](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/Lint%20Code%20Base/rel-4_0?style=flat&label=Lint) [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/DK4Znuny-QuickDelete/4.0.2/rel-4_0)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/compare/4.0.2...rel-4_0) |
@@ -25,7 +31,6 @@
 ## Feature List
 
 This package enables a **"Quick Delete"** feature in ticket action row.
-
 
 With it you can delete a ticket without having to leave a note.
 

@@ -13,6 +13,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Check out DK4
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          repository: dennykorsukewitz/DK4
+          path: DK4
       - name: Branch Name
         run: echo running on branch ${GITHUB_REF##*/}
       - name: Lint Code Base
@@ -20,7 +27,6 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
-          LINTER_RULES_PATH: https://github.com/DavidAnson/markdownlint/blob/main/schema/
-          MARKDOWN_CONFIG_FILE: .markdownlint.yaml
+          LINTER_RULES_PATH: DK4/linters
           DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
