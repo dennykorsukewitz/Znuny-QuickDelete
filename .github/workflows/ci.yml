@@ -57,12 +57,6 @@ jobs:
     container: debian:10-slim
     needs: [
       ZnunyCodePolicy,
-      CPANAudit,
-      Contributors,
-      Database-Schema,
-      Database-InitialInsert,
-      Migration,
-      RPMSpec,
     ]
     env:
       DB: mysql

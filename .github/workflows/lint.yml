@@ -16,8 +16,10 @@ jobs:
       - name: Branch Name
         run: echo running on branch ${GITHUB_REF##*/}
       - name: Lint Code Base
-        uses: github/super-linter@v3.17.0
+        uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
+          VALIDATE_JSCPD: false
+          MARKDOWN_CONFIG_FILE: https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
           DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
