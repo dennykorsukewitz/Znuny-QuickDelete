@@ -1,0 +1,122 @@
+---
+name: CI
+
+# Controls when the action will run.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ZnunyCodePolicy:
+    name: ZnunyCodePolicy
+    runs-on: ubuntu-latest
+    container: debian:10-slim
+    steps:
+
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          path: package
+
+      - name: Check out Znuny
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          repository: znuny/Znuny
+          path: znuny
+
+      - name: Check out ZnunyCodePolicy
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          repository: znuny/ZnunyCodePolicy
+          path: codepolicy
+
+      - name: Install dependencies
+        run: znuny/.github/workflows/ci/dependencies.sh
+
+      - name: Prepare ZnunyCodePolicy
+        run: |
+          cpanm --verbose Algorithm::Diff Code::TidyAll Perl::Critic Perl::Tidy Pod::POM XML::Parser
+          codepolicy/bin/znuny.CodePolicy.pl --install-eslint
+
+      - name: Run code policy
+        run: |
+          cd "${GITHUB_WORKSPACE}/package"
+          git init
+          "${GITHUB_WORKSPACE}/codepolicy/bin/znuny.CodePolicy.pl" --all-files --mode ci
+
+  UnitTest-MySQL:
+    name: UnitTest:MySQL
+    runs-on: ubuntu-latest
+    container: debian:10-slim
+    needs: [
+      ZnunyCodePolicy,
+      CPANAudit,
+      Contributors,
+      Database-Schema,
+      Database-InitialInsert,
+      Migration,
+      RPMSpec,
+    ]
+    env:
+      DB: mysql
+      MYSQL_USER: "otrs"
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_DATABASE: "otrs"
+    services:
+      mariadb:
+        image: mariadb:10
+        env:
+          MYSQL_USER: "otrs"
+          MYSQL_ROOT_PASSWORD: "secret"
+          MYSQL_PASSWORD: "secret"
+          MYSQL_DATABASE: "otrs"
+    steps:
+
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          path: package
+
+      - name: Check out module-tools
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          repository: OTRS/module-tools
+          path: module-tools
+
+      - name: Check out Znuny
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          repository: znuny/Znuny
+          path: znuny
+
+      - name: Install dependencies
+        run: znuny/.github/workflows/ci/dependencies.sh
+
+      - name: Setup Znuny
+        run: znuny/.github/workflows/ci/setup.sh
+
+      - name: Link Package
+        run: |
+          module-tools/bin/otrs.ModuleTools.pl Module::File::Link package znuny
+          su -c "bin/otrs.Console.pl Maint::Cache::Delete" - otrs
+          su -c "bin/otrs.Console.pl Maint::Config::Rebuild --cleanup" - otrs
+          su -c "bin/otrs.CheckSum.pl -a create" - otrs
+
+      - name: Run UnitTests
+        run: |
+          su -c "bin/otrs.CheckSum.pl -a create" - otrs
+          su -c "bin/otrs.Console.pl Dev::UnitTest::Run --sopm-file DK4Znuny-QuickDelete.sopm" - otrs
