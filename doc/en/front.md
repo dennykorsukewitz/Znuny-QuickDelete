@@ -11,6 +11,6 @@ DK4Znuny-QuickDelete
 <h1 style="text-align: center;">
 Znuny 6.4
 </h1>
-<p style="padding-top: 520px">
+<p style="padding-top: 550px">
     <br>
 </p>

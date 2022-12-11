@@ -57,8 +57,7 @@ jobs:
 
       - name: Setup Znuny
         run: |
-          ln -sf "$PWD" /opt/otrs
-          cd /opt/otrs
+          cd znuny
           znuny/.github/workflows/ci/setup.sh
 
       - name: Link Package

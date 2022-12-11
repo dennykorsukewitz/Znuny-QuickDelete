@@ -21,12 +21,13 @@ jobs:
           repository: dennykorsukewitz/DK4
           path: DK4
       - name: Branch Name
-        run: echo running on branch ${GITHUB_REF##*/}
+        run: echo running on branch "${GITHUB_REF##*/}"
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
           LINTER_RULES_PATH: DK4/linters
+          MARKDOWN_CONFIG_FILE: .markdownlint.yaml
           DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
