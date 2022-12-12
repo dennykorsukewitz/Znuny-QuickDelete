@@ -11,7 +11,7 @@ jobs:
 
   UnitTest-MySQL:
     name: UnitTest:MySQL
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # ubuntu-latest
     container: debian:10-slim
     env:
       DB: mysql
@@ -89,12 +89,11 @@ jobs:
       - name: Link Package
         run: |
           cd "$GITHUB_WORKSPACE"
-          cpanm --installdeps .
+          apt-get install -y libdatetime-perl libgetopt-complete-perl libio-interactive-perl libstring-similarity-perl libxmlrpc-lite-perl
           su -c "$GITHUB_WORKSPACE/module-tools/bin/otrs.ModuleTools.pl Module::File::Link package znuny" - otrs
           cd znuny
           su -c "bin/otrs.Console.pl Maint::Cache::Delete" - otrs
           su -c "bin/otrs.Console.pl Maint::Config::Rebuild --cleanup" - otrs
-          su -c "bin/otrs.CheckSum.pl -a create" - otrs
 
       - name: Run UnitTests
         run: |
