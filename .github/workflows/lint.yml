@@ -7,7 +7,7 @@ on:
 jobs:
   Lint:
     name: Lint Code Base
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3

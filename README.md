@@ -1,16 +1,11 @@
 # DK4Znuny-QuickDelete
 
-<table>
-<tr><td>
-
 | GitHub | Package |
 | ------ | ------ |
 | ![GitHub open issues](https://img.shields.io/github/issues/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/dennykorsukewitz/DK4Znuny-QuickDelete) |
 | ![GitHub closed issues](https://img.shields.io/github/issues-closed/dennykorsukewitz/DK4Znuny-QuickDelete?color=#44CC44) | ![GitHub license](https://img.shields.io/github/license/dennykorsukewitz/DK4Znuny-QuickDelete) |
 | ![GitHub contributors](https://img.shields.io/github/contributors/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub language count](https://img.shields.io/github/languages/count/dennykorsukewitz/DK4Znuny-QuickDelete?style=flat&label=language)  |
 | ![GitHub all releases](https://img.shields.io/github/downloads/dennykorsukewitz/DK4Znuny-QuickDelete/total?style=flat) |  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dennykorsukewitz/DK4Znuny-QuickDelete)  |
-
-</td><td>
 
 | Versions | Status |
 | ------ | ------ |
@@ -20,7 +15,6 @@
 | ![GitHub label version](https://img.shields.io/github/labels/dennykorsukewitz/DK4Znuny-QuickDelete/OTRS%204)  | ![GitHub Workflow Lint](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/Lint%20Code%20Base/rel-4_0?style=flat&label=Lint) [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/DK4Znuny-QuickDelete/4.0.2/rel-4_0)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/compare/4.0.2...rel-4_0) |
 | ![GitHub label version](https://img.shields.io/github/labels/dennykorsukewitz/DK4Znuny-QuickDelete/OTRS%203)  | ![GitHub Workflow Lint](https://img.shields.io/github/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/Lint%20Code%20Base/rel-3_3?style=flat&label=Lint) [![GitHub commits since tagged version](https://img.shields.io/github/commits-since/dennykorsukewitz/DK4Znuny-QuickDelete/3.3.3/rel-3_3)](https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete/compare/3.3.3...rel-3_3) |
 
-</td></tr> </table>
 
 ## Feature List
 
