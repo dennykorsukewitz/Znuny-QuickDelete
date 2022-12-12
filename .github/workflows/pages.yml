@@ -43,7 +43,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
-          generator_config_file: DK4/.github/pages/_config.yml
+          generator_config_file: 'DK4/.github/pages/_config.yml'
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -53,6 +53,7 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        with:
           name: 'github-pages'
           path: ./_site
 
