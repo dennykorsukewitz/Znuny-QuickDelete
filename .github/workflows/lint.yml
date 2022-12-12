@@ -1,21 +1,36 @@
 ---
-name: Lint Code Base
+name: Lint
 on:
   push:
   pull_request:
 
 jobs:
-  build:
-    name: Lint
-    runs-on: ubuntu-latest
+  Lint:
+    name: Lint Code Base
+    runs-on: ubuntu-22.04 # ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Lint Code Base
-        uses: github/super-linter@v3
+          path: package
+
+      - name: Check out DK4
+        uses: actions/checkout@v3
         env:
-          VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: otrs3
+          fetch-depth: "1"
+        with:
+          repository: dennykorsukewitz/DK4
+          path: DK4
+
+      - name: Branch Name
+        run: echo running on branch "${GITHUB_REF##*/}"
+
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: 'DK4/.github/linters'
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_JSCPD: false
