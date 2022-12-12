@@ -25,16 +25,11 @@ jobs:
       - name: Branch Name
         run: echo running on branch "${GITHUB_REF##*/}"
 
-      - name: Copy linters configs
-        run: |
-          pwd
-          ls -alih
-          cp -Rf DK4/linter/* package/.github/linters/
-
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
+          LINTER_RULES_PATH: 'DK4/.github/linters'
           DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

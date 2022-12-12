@@ -73,9 +73,7 @@ jobs:
           apachectl start
 
           # MySQL
-          if [ "$DB" == "mysql" ]; then
-              .github/workflows/ci/config-mysql.sh
-          fi
+          .github/workflows/ci/config-mysql.sh
 
           # run needed scripts
           /opt/otrs/bin/otrs.SetPermissions.pl
@@ -83,14 +81,10 @@ jobs:
           touch /opt/otrs/installed
 
           # prepare Selenium tests
-          if [[ "$GITHUB_JOB" =~ ^Selenium ]]; then
-              .github/workflows/ci/config-selenium.sh
-          fi
+          .github/workflows/ci/config-selenium.sh
 
-          if [ "$DB" ]; then
-              su -c "bin/otrs.Console.pl Maint::Config::Rebuild" - otrs
-              su -c "bin/otrs.Console.pl Admin::Config::Update --setting-name CheckEmailAddresses --value 0" - otrs
-          fi
+          su -c "bin/otrs.Console.pl Maint::Config::Rebuild" - otrs
+          su -c "bin/otrs.Console.pl Admin::Config::Update --setting-name CheckEmailAddresses --value 0" - otrs
 
       - name: Link Package
         run: |
