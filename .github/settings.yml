@@ -6,7 +6,7 @@ repository:
   description: This package enables a "Quick Delete" feature in ticket action row.
 
   # A URL with more information about the repository
-  homepage: https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete
+  homepage: https://dennykorsukewitz.github.io/DK4Znuny-QuickDelete/
 
   # A comma-separated list of topics to set on the repository
   topics: otrs, znuny, DK4Znuny-QuickDelete, otrs-package, znuny-package, package
@@ -45,7 +45,7 @@ repository:
 # Labels: define labels for Issues and Pull Requests
 labels:
   - name: dev
-    color: '#00ff08'
+    color: '#44cc11'
     description: Default Branch
 
   - name: OTRS 3
