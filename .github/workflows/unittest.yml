@@ -88,7 +88,8 @@ jobs:
 
       - name: Link Package
         run: |
-          module-tools/bin/otrs.ModuleTools.pl Module::File::Link package znuny
+          "$GITHUB_WORKSPACE"/module-tools/bin/otrs.ModuleTools.pl Module::File::Link package znuny
+          cd znuny
           su -c "bin/otrs.Console.pl Maint::Cache::Delete" - otrs
           su -c "bin/otrs.Console.pl Maint::Config::Rebuild --cleanup" - otrs
           su -c "bin/otrs.CheckSum.pl -a create" - otrs

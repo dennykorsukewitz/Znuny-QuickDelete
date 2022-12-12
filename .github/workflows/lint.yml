@@ -28,8 +28,8 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
-          VALIDATE_ALL_CODEBASE: true
-          VALIDATE_JSCPD: false
-          LINTER_RULES_PATH: 'DK4/.github/linters'
           DEFAULT_BRANCH: ${GITHUB_REF##*/}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: 'DK4/.github/linters'
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_JSCPD: false
