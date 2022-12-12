@@ -88,7 +88,9 @@ jobs:
 
       - name: Link Package
         run: |
-          "$GITHUB_WORKSPACE"/module-tools/bin/otrs.ModuleTools.pl Module::File::Link package znuny
+          cd "$GITHUB_WORKSPACE"
+          cpanm --installdeps .
+          su -c "$GITHUB_WORKSPACE/module-tools/bin/otrs.ModuleTools.pl Module::File::Link package znuny" - otrs
           cd znuny
           su -c "bin/otrs.Console.pl Maint::Cache::Delete" - otrs
           su -c "bin/otrs.Console.pl Maint::Config::Rebuild --cleanup" - otrs
