@@ -11,7 +11,7 @@ env:
   GITHUB_TOKEN: ${{ github.token }}
 
 jobs:
-  pdf:
+  PDF:
     name: Create PDF Documents
     runs-on: ubuntu-22.04 # ubuntu-latest
     steps:

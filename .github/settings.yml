@@ -62,7 +62,7 @@ labels:
 
   - name: Znuny 6.4
     color: '#ff9b00'
-    description: Znuny 6 Framework.
+    description: Znuny 6.4 Framework.
 
   - name: Bug
     color: '#FF0000'
