@@ -28,7 +28,7 @@ repository:
   has_downloads: true
 
   # Updates the default branch for this repository.
-  default_branch: develop
+  default_branch: dev
 
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
@@ -60,7 +60,7 @@ labels:
     color: '#F781F3'
     description: OTRS 6 Framework.
 
-  - name: Znuny 6
+  - name: Znuny 6.4
     color: '#ff9b00'
     description: Znuny 6 Framework.
 
