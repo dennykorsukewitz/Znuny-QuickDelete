@@ -44,6 +44,10 @@ repository:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: dev
+    color: '#00ff08'
+    description: Default Branch
+
   - name: OTRS 3
     color: '#F781F3'
     description: OTRS 3 Framework.
