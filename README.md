@@ -1,8 +1,5 @@
 # DK4Znuny-QuickDelete
 
-
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dennykorsukewitz/DK4Znuny-QuickDelete/lint.yml)
-
 | GitHub | Package |
 | ------ | ------ |
 | ![GitHub open issues](https://img.shields.io/github/issues/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/dennykorsukewitz/DK4Znuny-QuickDelete) |
