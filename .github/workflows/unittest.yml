@@ -90,9 +90,9 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           apt-get install -y libdatetime-perl libgetopt-complete-perl libio-interactive-perl libstring-similarity-perl libxmlrpc-lite-perl
 
-          ls -alih $GITHUB_WORKSPACE
-          ls -alih $GITHUB_WORKSPACE/package
-          ls -alih $GITHUB_WORKSPACE/znuny
+          ls -alih "$GITHUB_WORKSPACE"
+          ls -alih "$GITHUB_WORKSPACE"/package
+          ls -alih "$GITHUB_WORKSPACE"/znuny
 
           su -c "$GITHUB_WORKSPACE/module-tools/bin/otrs.ModuleTools.pl Module::File::Link $GITHUB_WORKSPACE/package $GITHUB_WORKSPACE/znuny" - otrs
           cd znuny

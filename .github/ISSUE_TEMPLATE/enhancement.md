@@ -6,10 +6,12 @@ labels: 'Enhancement, Clarification'
 assignees: 'dennykorsukewitz'
 ---
 
-### Expected behavior
+# Enhancement
+
+## Expected behavior
 
 A clear and concise description of what you expected to happen.
 
-### Actual behavior
+## Actual behavior
 
 A clear and concise description of what happened.

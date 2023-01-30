@@ -6,15 +6,17 @@ labels: 'Bug'
 assignees: 'dennykorsukewitz'
 ---
 
-### Expected behavior
+# Bug report
+
+## Expected behavior
 
 A clear and concise description of what you expected to happen.
 
-### Actual behavior
+## Actual behavior
 
 A clear and concise description of what happened (the issue/bug/problem).
 
-### How to reproduce
+## How to reproduce
 
 Steps to reproduce the behavior:
 
@@ -23,16 +25,16 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
-### Screenshots
+## Screenshots
 
 If applicable, add screenshots to help explain your problem.
 
-### Environment
+## Environment
 
 - OS: [e.g. Windows, macOS, Linux]
 - Browser: [e. g. Chrome, Firefox, Safari]
-- Znuny version [e. g. 6.0.15]
+- OTRS version [e. g. 6.0.15]
 
-### Additional information
+## Additional information
 
 Add any other information about the problem here.
