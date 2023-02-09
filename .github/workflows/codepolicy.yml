@@ -4,6 +4,7 @@ name: CodePolicy
 # Controls when the action will run.
 on:
   push:
+    # branches: ["NEVER"]
   pull_request:
   workflow_dispatch:
 
@@ -19,7 +20,7 @@ jobs:
         env:
           fetch-depth: "1"
         with:
-          path: package
+          path: repository
 
       - name: Check out Znuny
         uses: actions/checkout@v3
@@ -47,6 +48,6 @@ jobs:
 
       - name: Run code policy
         run: |
-          cd "${GITHUB_WORKSPACE}/package"
+          cd "${GITHUB_WORKSPACE}/repository"
           git init
           "${GITHUB_WORKSPACE}/codepolicy/bin/znuny.CodePolicy.pl" --all-files --mode ci

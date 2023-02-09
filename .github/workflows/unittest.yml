@@ -33,7 +33,7 @@ jobs:
         env:
           fetch-depth: "1"
         with:
-          path: package
+          path: repository
 
       - name: Check out module-tools
         uses: actions/checkout@v3
@@ -53,6 +53,11 @@ jobs:
 
       - name: Install dependencies
         run: znuny/.github/workflows/ci/dependencies.sh
+
+      - name: Install Devel::Cover and Devel::Cover::Report::Clover
+        run: |
+          apt-get install -y libdevel-cover-perl
+          cpanm -i Devel::Cover::Report::Coveralls
 
       - name: Setup Znuny
         run: |
@@ -85,21 +90,42 @@ jobs:
           su -c "bin/otrs.Console.pl Maint::Config::Rebuild" - otrs
           su -c "bin/otrs.Console.pl Admin::Config::Update --setting-name CheckEmailAddresses --value 0" - otrs
 
-      - name: Link Package
+      - name: Link repository
         run: |
           cd "$GITHUB_WORKSPACE"
           apt-get install -y libdatetime-perl libgetopt-complete-perl libio-interactive-perl libstring-similarity-perl libxmlrpc-lite-perl
 
-          ls -alih "$GITHUB_WORKSPACE"
-          ls -alih "$GITHUB_WORKSPACE"/package
-          ls -alih "$GITHUB_WORKSPACE"/znuny
-
-          su -c "$GITHUB_WORKSPACE/module-tools/bin/otrs.ModuleTools.pl Module::File::Link $GITHUB_WORKSPACE/package $GITHUB_WORKSPACE/znuny" - otrs
+          su -c "$GITHUB_WORKSPACE/module-tools/bin/otrs.ModuleTools.pl Module::File::Link $GITHUB_WORKSPACE/repository $GITHUB_WORKSPACE/znuny" - otrs
           cd znuny
           su -c "bin/otrs.Console.pl Maint::Cache::Delete" - otrs
           su -c "bin/otrs.Console.pl Maint::Config::Rebuild --cleanup" - otrs
 
-      - name: Run UnitTests
+      - name: Run UnitTests with Coverage
         run: |
+          FILES=$(find repository -type f | sed -r "s|repository/||g" | grep -v '^.git' | grep -v '^doc') && echo "$FILES"
+
+          SELECTFILES=$(echo "$FILES" | grep "\.pm$"  | grep -v "Kernel/cpan-lib" | grep -v "Kernel/Language" | grep -v "Kernel/Modules" | grep -v "Kernel/Output" | sed -r "s|(.*)|,-select,&|g" | xargs | sed "s|[[:space:]]||g") && echo "$SELECTFILES"
+          if [ -z "$SELECTFILES"  ]; then echo "No files found for coverage check." && exit 0 ;fi
+
           su -c "bin/otrs.CheckSum.pl -a create" - otrs
-          su -c "bin/otrs.Console.pl Dev::UnitTest::Run --sopm-file DK4Znuny-QuickDelete.sopm" - otrs
+          su -c "perl -MDevel::Cover=-silent,1,+ignore,'.*'$SELECTFILES bin/otrs.Console.pl Dev::UnitTest::Run --sopm-file ${{ github.event.repository.name }}.sopm" - otrs
+          cd znuny
+          su -c "cover >> coverage.txt" - otrs
+          COVERAGE=$(awk '$1 == "Total" {print $NF+0}' coverage.txt) && echo "COVERAGE: $COVERAGE"
+          echo "COVERAGE=$COVERAGE" >> "$GITHUB_ENV"
+          echo "GITHUB_REF=${GITHUB_REF##*/}" >> "$GITHUB_ENV"
+
+      - name: Dumper env
+        run: echo "${{ env }}"
+
+      - name: Create Coverage Badge
+        uses: schneegans/dynamic-badges-action@v1.6.0
+        with:
+          auth: ${{ secrets.GIST }}
+          gistID: e2729bfd9b81d9c032ded617a3f924e7
+          filename: ${{ github.event.repository.name }}:coverage:${{ env.GITHUB_REF }}.json
+          label: Coverage
+          message: ${{ env.COVERAGE }}%
+          valColorRange: ${{ env.COVERAGE }}
+          minColorRange: 0
+          maxColorRange: 100

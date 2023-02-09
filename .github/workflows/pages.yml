@@ -4,7 +4,8 @@ name: GitHub Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["dev", "update-dev"]
+    # branches: ["NEVER"]
+    branches: ["dev", "dev-update"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,7 +39,7 @@ jobs:
           fetch-depth: "1"
         with:
           repository: dennykorsukewitz/DK4
-          ref: 'dev' # update-dev
+          ref: 'dev' # dev-update
           path: DK4
 
       - name: Prepare config
@@ -61,7 +62,7 @@ jobs:
   # Deployment job
   Deploy:
     environment:
-      name: github-pages
+      name: GitHub-Pages
       url: "${steps.deployment.outputs.page_url}"
     runs-on: ubuntu-22.04 # ubuntu-latest
     needs: Build
