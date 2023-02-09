@@ -116,7 +116,7 @@ jobs:
           echo "GITHUB_REF=${GITHUB_REF##*/}" >> "$GITHUB_ENV"
 
       - name: Dumper env
-        run: echo "${{ env }}"
+        run: echo '${{ toJSON(env) }}'
 
       - name: Create Coverage Badge
         uses: schneegans/dynamic-badges-action@v1.6.0
