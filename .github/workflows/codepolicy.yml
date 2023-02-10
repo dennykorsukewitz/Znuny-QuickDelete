@@ -10,44 +10,4 @@ on:
 
 jobs:
   ZnunyCodePolicy:
-    name: ZnunyCodePolicy
-    runs-on: ubuntu-latest
-    container: debian:10-slim
-    steps:
-
-      - name: Check out repository code
-        uses: actions/checkout@v3
-        env:
-          fetch-depth: "1"
-        with:
-          path: repository
-
-      - name: Check out Znuny
-        uses: actions/checkout@v3
-        env:
-          fetch-depth: "1"
-        with:
-          repository: znuny/Znuny
-          path: znuny
-
-      - name: Check out ZnunyCodePolicy
-        uses: actions/checkout@v3
-        env:
-          fetch-depth: "1"
-        with:
-          repository: znuny/ZnunyCodePolicy
-          path: codepolicy
-
-      - name: Install dependencies
-        run: znuny/.github/workflows/ci/dependencies.sh
-
-      - name: Prepare ZnunyCodePolicy
-        run: |
-          cpanm --verbose Algorithm::Diff Code::TidyAll Perl::Critic Perl::Tidy Pod::POM XML::Parser
-          codepolicy/bin/znuny.CodePolicy.pl --install-eslint
-
-      - name: Run code policy
-        run: |
-          cd "${GITHUB_WORKSPACE}/repository"
-          git init
-          "${GITHUB_WORKSPACE}/codepolicy/bin/znuny.CodePolicy.pl" --all-files --mode ci
+    uses: dennykorsukewitz/DK4/.github/workflows/reusable.codepolicy.yml@dev
