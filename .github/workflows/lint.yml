@@ -6,9 +6,6 @@ on:
   pull_request:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 jobs:
   Lint:
     uses: dennykorsukewitz/DK4/.github/workflows/reusable.lint.yml@dev
