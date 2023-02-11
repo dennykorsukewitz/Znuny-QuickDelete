@@ -8,5 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  UnitTest-MySQL:
+  UnitTest:
     uses: dennykorsukewitz/DK4/.github/workflows/reusable.unittest.yml@dev
+    secrets:
+      GIST: ${{ secrets.GIST }}

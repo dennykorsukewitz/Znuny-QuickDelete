@@ -3,10 +3,8 @@ name: GitHub Pages
 
 on:
   push:
-    branches: ["dev", "dev-update"]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    branches: ["dev", "update-dev"]
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 jobs:
   Pages:

@@ -8,9 +8,7 @@ on:
     # paths:
     #   - 'doc/de/*.md'
     #   - 'doc/en/*.md'
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 jobs:
   PDF:
