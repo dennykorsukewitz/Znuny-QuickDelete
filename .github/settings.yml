@@ -9,7 +9,7 @@ repository:
   homepage: https://dennykorsukewitz.github.io/DK4Znuny-QuickDelete/
 
   # A comma-separated list of topics to set on the repository
-  topics: otrs, znuny, DK4Znuny-QuickDelete, otrs-package, znuny-package, package
+  topics: pages, otrs, znuny, package
 
   # Either `true` to make the repository private, or `false` to make it public.
   private: false
