@@ -7,8 +7,8 @@ You can close a ticket without having to leave a note.
 
 | Repository | GitHub |
 | ------ | ------ |
-|  ![GitHub release (latest by date)](https://img.shields.io/github/v/release/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub open issues](https://img.shields.io/github/issues/dennykorsukewitz/DK4Znuny-QuickDelete) |
-|  ![GitHub license](https://img.shields.io/github/license/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub closed issues](https://img.shields.io/github/issues-closed/dennykorsukewitz/DK4Znuny-QuickDelete?color=#44CC44) |
+|  ![GitHub release (latest by date)](https://img.shields.io/github/v/release/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub open issues](https://img.shields.io/github/issues/dennykorsukewitz/DK4Znuny-QuickDelete) ![GitHub closed issues](https://img.shields.io/github/issues-closed/dennykorsukewitz/DK4Znuny-QuickDelete?color=#44CC44) |
+|  ![GitHub license](https://img.shields.io/github/license/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub pull requests](https://img.shields.io/github/issues-pr/dennykorsukewitz/DK4Znuny-QuickDelete?label=PR) ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/dennykorsukewitz/DK4Znuny-QuickDelete?color=g&label=PR) |
 |  ![GitHub language count](https://img.shields.io/github/languages/count/dennykorsukewitz/DK4Znuny-QuickDelete?style=flat&label=language)  | ![GitHub contributors](https://img.shields.io/github/contributors/dennykorsukewitz/DK4Znuny-QuickDelete) |
 |   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/dennykorsukewitz/DK4Znuny-QuickDelete) | ![GitHub all releases](https://img.shields.io/github/downloads/dennykorsukewitz/DK4Znuny-QuickDelete/total?style=flat) |
 
