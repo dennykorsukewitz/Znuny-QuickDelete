@@ -12,4 +12,4 @@ on:
 
 jobs:
   PDF:
-    uses: dennykorsukewitz/DK4/.github/workflows/reusable.pdf.yml@dev
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.pdf.yml@dev

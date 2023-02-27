@@ -10,4 +10,4 @@ on:
 
 jobs:
   CodePolicy:
-    uses: dennykorsukewitz/DK4/.github/workflows/reusable.codepolicy.yml@dev
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.codepolicy.yml@dev
