@@ -68,6 +68,10 @@ labels:
     color: '#ff9b00'
     description: Znuny 6.4 Framework.
 
+  - name: Znuny 6.5
+    color: '#ff9b00'
+    description: Znuny 6.5 Framework.
+
   - name: Bug
     color: '#FF0000'
     description: An issue with the system.
