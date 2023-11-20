@@ -6,7 +6,7 @@
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-package Kernel::Modules::AgentTicketDK4ZnunyQuickDelete;
+package Kernel::Modules::AgentTicketZnunyQuickDelete;
 
 use strict;
 use warnings;

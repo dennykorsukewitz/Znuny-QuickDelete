@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
-    <Name>DK4Znuny-QuickDelete</Name>
+    <Name>Znuny-QuickDelete</Name>
     <Version>6.5.1</Version>
     <Framework>6.5.x</Framework>
     <Framework>6.4.x</Framework>
@@ -8,7 +8,7 @@
     <Framework>6.2.x</Framework>
     <Framework>6.1.x</Framework>
     <Vendor>Denny Korsukéwitz</Vendor>
-    <URL>https://github.com/dennykorsukewitz/DK4Znuny-QuickDelete</URL>
+    <URL>https://github.com/dennykorsukewitz/Znuny-QuickDelete</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Description Lang="en">Enables quick delete in ticket action row.</Description>
     <Description Lang="de">Ermöglicht es ein Ticket in die Junk-Queue zu verschieben.</Description>
@@ -20,25 +20,26 @@
     <ChangeLog Version="6.0.2" Date="2020-11-27 12:34:56 +0100">Tidied code.</ChangeLog>
     <ChangeLog Version="6.0.1" Date="2019-01-30 12:34:56 +0100">Ported to OTRS 6.</ChangeLog>
     <Filelist>
-        <File Permission="660" Location="doc/de/DK4Znuny-QuickDelete.pdf"/>
-        <File Permission="660" Location="doc/en/DK4Znuny-QuickDelete.pdf"/>
-        <File Permission="660" Location="Kernel/Config/Files/XML/DK4ZnunyQuickDelete.xml"/>
-        <File Permission="660" Location="Kernel/Language/de_DK4ZnunyQuickDelete.pm"/>
-        <File Permission="660" Location="Kernel/Modules/AgentTicketDK4ZnunyQuickDelete.pm"/>
-        <File Permission="660" Location="scripts/test/DK4ZnunyQuickDelete/var/packagesetup/DK4ZnunyQuickDelete.t"/>
-        <File Permission="660" Location="var/packagesetup/DK4ZnunyQuickDelete.pm"/>
+        <File Permission="660" Location="doc/de/Znuny-QuickDelete.pdf"/>
+        <File Permission="660" Location="doc/en/Znuny-QuickDelete.pdf"/>
+        <File Permission="660" Location="Kernel/Config/Files/XML/ZnunyQuickDelete.xml"/>
+        <File Permission="660" Location="Kernel/Language/de_ZnunyQuickDelete.pm"/>
+        <File Permission="660" Location="Kernel/Modules/AgentTicketZnunyQuickDelete.pm"/>
+        <File Permission="660" Location="scripts/test/ZnunyQuickDelete/var/packagesetup/ZnunyQuickDelete.t"/>
+        <File Permission="660" Location="var/packagesetup/ZnunyQuickDelete.pm"/>
     </Filelist>
     <CodeInstall Type="post"><![CDATA[
-        $Kernel::OM->Get('var::packagesetup::DK4ZnunyQuickDelete')->CodeInstall();
+        $Kernel::OM->Get('var::packagesetup::ZnunyQuickDelete')->CodeInstall();
     ]]></CodeInstall>
     <CodeReinstall Type="post"><![CDATA[
-        $Kernel::OM->Get('var::packagesetup::DK4ZnunyQuickDelete')->CodeReinstall();
+        $Kernel::OM->Get('var::packagesetup::ZnunyQuickDelete')->CodeReinstall();
     ]]></CodeReinstall>
     <CodeUpgrade Type="post"><![CDATA[
-        $Kernel::OM->Get('var::packagesetup::DK4ZnunyQuickDelete')->CodeUpgrade();
+        $Kernel::OM->Get('var::packagesetup::ZnunyQuickDelete')->CodeUpgrade();
     ]]></CodeUpgrade>
     <CodeUninstall Type="pre"><![CDATA[
-        $Kernel::OM->Get('var::packagesetup::DK4ZnunyQuickDelete')->CodeUninstall();
+        $Kernel::OM->Get('var::packagesetup::ZnunyQuickDelete')->CodeUninstall();
     ]]></CodeUninstall>
     <PackageMerge Name="DK4OTRS-QuickDelete" TargetVersion="6.1.0"></PackageMerge>
+    <PackageMerge Name="DK4Znuny-QuickDelete" TargetVersion="6.1.0"></PackageMerge>
 </otrs_package>

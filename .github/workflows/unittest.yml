@@ -9,6 +9,6 @@ on:
 
 jobs:
   UnitTest:
-    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.unittest.yml@dev
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.unittest.znuny.yml@dev
     secrets:
       GIST: ${{ secrets.GIST }}

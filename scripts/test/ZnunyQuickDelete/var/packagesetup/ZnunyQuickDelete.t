@@ -20,7 +20,7 @@ $Kernel::OM->ObjectParamAdd(
     },
 );
 
-my $PackageSetupObject = $Kernel::OM->Get('var::packagesetup::DK4ZnunyQuickDelete');
+my $PackageSetupObject = $Kernel::OM->Get('var::packagesetup::ZnunyQuickDelete');
 
 $Self->True(
     scalar $PackageSetupObject->CodeInstall(),

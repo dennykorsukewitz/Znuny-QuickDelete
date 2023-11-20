@@ -5,7 +5,7 @@
     <br>
 </p>
 <h1 style="text-align: center;">
-DK4Znuny-QuickDelete
+Znuny-QuickDelete
 </h1>
 
 <h1 style="text-align: center;">

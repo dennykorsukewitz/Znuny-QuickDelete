@@ -1,12 +1,12 @@
 repository:
   # The name of the repository. Changing this will rename the repository
-  name: DK4Znuny-QuickDelete
+  name: Znuny-QuickDelete
 
   # A short description of the repository that will show up on GitHub
   description: This package enables a "Quick Delete" feature in ticket action row.
 
   # A URL with more information about the repository
-  homepage: https://dennykorsukewitz.github.io/DK4Znuny-QuickDelete/
+  homepage: https://dennykorsukewitz.github.io/Znuny-QuickDelete/
 
   # A comma-separated list of topics to set on the repository
   topics: pages, otrs, znuny, package

@@ -7,4 +7,4 @@ Falls Sie eine andere Junk-Queue definiert haben, kann diese auch in der [SysCon
 
 ## GenericAgent Job
 
-Bei der Installation wird ein GenericAgent Job `DK4ZnunyQuickDelete` angelegt der jeden Tag um 01:00 Uhr alle Tickets in der SysConfig `Ticket::Frontend::AgentTicketDK4ZnunyQuickDelete###Queue` definierten Queue löscht.
+Bei der Installation wird ein GenericAgent Job `ZnunyQuickDelete` angelegt der jeden Tag um 01:00 Uhr alle Tickets in der SysConfig `Ticket::Frontend::AgentTicketZnunyQuickDelete###Queue` definierten Queue löscht.
