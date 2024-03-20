@@ -120,3 +120,4 @@ jobs:
           bodyFile: "RELEASE.md"
           draft: true
           generateReleaseNotes: true
+          token: ${{ secrets.PAT }}
