@@ -1,10 +1,11 @@
 ---
-name: UnitTest
+name: Release
 
-# Controls when the action will run.
 on:
   push:
-  pull_request:
+    tags:
+      - "*"
+    # branches: ["dev"]
   workflow_dispatch:
     inputs:
       ZNUNY_REF:
@@ -17,10 +18,8 @@ on:
         default: znuny
 
 jobs:
-  UnitTest:
-    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.unittest.znuny.yml@dev
-    secrets:
-      GIST: ${{ secrets.GIST }}
+  Release:
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.release.znuny.yml@dev
     with:
       ZNUNY_REF: ${{ inputs.ZNUNY_REF || 'dev' }}
       FRAMEWORK: ${{ inputs.FRAMEWORK || 'znuny' }}
