@@ -112,10 +112,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: OPM
-      - name: DELETE ME
-        run: ls -alih
       - name: Change RELEASE.md
-        run: sed -i '' '1,2d' RELEASE.md
+        run: sed -i '1,2d' RELEASE.md
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "${{ github.event.repository.name }}*.opm,doc/en/${{ github.event.repository.name }}.pdf"
