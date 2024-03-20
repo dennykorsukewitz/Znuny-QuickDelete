@@ -25,7 +25,7 @@ You can close a ticket without leaving a note.
 
 ## Feature List
 
-Further information can be found in the documentation ([en](doc/en/feature.md)/[de](doc/de/feature.md)).
+Further information can be found in the documentation ([en](doc/en/Znuny-QuickDelete.md#functionality)/[de](doc/de/Znuny-QuickDelete.md#funktionalität)).
 
 ## Installation
 
@@ -33,7 +33,7 @@ Download the [package](https://github.com/dennykorsukewitz/Znuny-QuickDelete/rel
 
 ## Configuration
 
-Check configuration file ([en](doc/en/config.md)/[de](doc/de/config.md)) for further information.
+Check configuration file ([en](doc/en/Znuny-QuickDelete.md#configuration)/[de](doc/de/Znuny-QuickDelete.md#konfiguration)) for further information.
 
 ## Download
 
