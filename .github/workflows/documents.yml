@@ -1,0 +1,19 @@
+---
+name: Documents
+
+on:
+  push:
+    # branches: ["NEVER", "dev-update"]
+    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
+    tags-ignore:
+      - "*"
+    paths:
+      - "doc/de/*.md"
+      - "doc/en/*.md"
+      - "doc/de/images/*"
+      - "doc/en/images/*"
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  Documents:
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.documents.yml@dev

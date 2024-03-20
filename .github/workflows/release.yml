@@ -1,0 +1,25 @@
+---
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+    # branches: ["dev"]
+  workflow_dispatch:
+    inputs:
+      ZNUNY_REF:
+        required: false
+        type: string
+        default: dev
+      FRAMEWORK:
+        required: false
+        type: string
+        default: znuny
+
+jobs:
+  Release:
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.release.znuny.yml@dev
+    with:
+      ZNUNY_REF: ${{ inputs.ZNUNY_REF || 'dev' }}
+      FRAMEWORK: ${{ inputs.FRAMEWORK || 'znuny' }}
