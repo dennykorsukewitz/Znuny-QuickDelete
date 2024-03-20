@@ -1,0 +1,119 @@
+---
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+    # branches: ["dev"]
+  workflow_dispatch:
+    inputs:
+      ZNUNY_REF:
+        required: false
+        type: string
+        default: dev
+      FRAMEWORK:
+        required: false
+        type: string
+        default: znuny
+
+jobs:
+  Build:
+    name: Build
+    runs-on: ubuntu-22.04 # ubuntu-latest
+    container: debian:10-slim
+    env:
+      DB: mysql
+      MYSQL_USER: "${{ inputs.FRAMEWORK || 'znuny' }}"
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_DATABASE: "${{ inputs.FRAMEWORK || 'znuny' }}"
+    services:
+      mariadb:
+        image: mariadb:10
+        env:
+          MYSQL_USER: "${{ inputs.FRAMEWORK || 'znuny' }}"
+          MYSQL_ROOT_PASSWORD: "secret"
+          MYSQL_PASSWORD: "secret"
+          MYSQL_DATABASE: "${{ inputs.FRAMEWORK || 'znuny' }}"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          path: repository
+
+      - name: Checkout module-tools
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+        with:
+          repository: znuny/module-tools
+          path: module-tools
+
+      - name: Checkout Znuny
+        uses: actions/checkout@v4
+        env:
+          fetch-depth: "1"
+        with:
+          repository: znuny/Znuny
+          ref: ${{ inputs.ZNUNY_REF }}
+          path: znuny
+
+      - name: Install dependencies
+        run: |
+          cd znuny
+          .github/workflows/ci/dependencies.sh
+
+      - name: Setup Znuny
+        run: |
+          cd znuny
+          .github/workflows/ci/setup.sh
+
+      - name: Link repository
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          apt-get install -y libdatetime-perl libgetopt-complete-perl libio-interactive-perl libstring-similarity-perl libxmlrpc-lite-perl
+
+          su -c "$GITHUB_WORKSPACE/module-tools/bin/${{ inputs.FRAMEWORK || 'znuny' }}.ModuleTools.pl Module::File::Link $GITHUB_WORKSPACE/repository $GITHUB_WORKSPACE/znuny" - "${{ inputs.FRAMEWORK || 'znuny' }}"
+
+          cd znuny
+          su -c "bin/${{ inputs.FRAMEWORK || 'znuny' }}.Console.pl Maint::Cache::Delete" - "${{ inputs.FRAMEWORK || 'znuny' }}"
+          su -c "bin/${{ inputs.FRAMEWORK || 'znuny' }}.Console.pl Maint::Config::Rebuild --cleanup" - "${{ inputs.FRAMEWORK || 'znuny' }}"
+
+      - name: Build OPM Package
+        run: |
+          cd znuny
+          su -c "bin/${{ inputs.FRAMEWORK || 'znuny' }}.Console.pl Dev::Package::Build ${{ github.event.repository.name }}.sopm ./" - "${{ inputs.FRAMEWORK || 'znuny' }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OPM
+          path: "znuny/${{ github.event.repository.name }}*.opm"
+
+  Release:
+    needs: Build
+    environment:
+      name: Release
+      url: "https://github.com/dennykorsukewitz/${{ github.event.repository.name }}"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        env:
+          fetch-depth: "1"
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: OPM
+      - name: Change RELEASE.md
+        run: sed -i '' '1,2d' RELEASE.md
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "${{ github.event.repository.name }}*.opm,doc/en/${{ github.event.repository.name }}.pdf"
+          bodyFile: "RELEASE.md"
+          draft: true
+          generateReleaseNotes: true

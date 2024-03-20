@@ -45,77 +45,77 @@ repository:
 # Labels: define labels for Issues and Pull Requests
 labels:
   - name: dev
-    color: '#44cc11'
+    color: "#44cc11"
     description: Default Branch
 
   - name: OTRS 3
-    color: '#F781F3'
+    color: "#F781F3"
     description: OTRS 3 Framework.
 
   - name: OTRS 4
-    color: '#F781F3'
+    color: "#F781F3"
     description: OTRS 4 Framework.
 
   - name: OTRS 5
-    color: '#F781F3'
+    color: "#F781F3"
     description: OTRS 5 Framework.
 
   - name: OTRS 6
-    color: '#F781F3'
+    color: "#F781F3"
     description: OTRS 6 Framework.
 
   - name: Znuny 6.4
-    color: '#ff9b00'
+    color: "#ff9b00"
     description: Znuny 6.4 Framework.
 
   - name: Znuny 6.5
-    color: '#ff9b00'
+    color: "#ff9b00"
     description: Znuny 6.5 Framework.
 
   - name: Bug
-    color: '#FF0000'
+    color: "#FF0000"
     description: An issue with the system.
 
   - name: Documentation
-    color: '#EB9419'
+    color: "#EB9419"
     description: Improvements or additions to documentation.
 
   - name: Feature
-    color: '#428BCA'
+    color: "#428BCA"
     description: New functionality.
 
   - name: Duplicate
-    color: '#cfd3d7'
+    color: "#cfd3d7"
     description: This issue or pull request already exists.
 
   - name: Framework
-    color: '#AA0033'
+    color: "#AA0033"
     description: Framework.
 
   - name: Refactoring
-    color: '#7F8C8D'
+    color: "#7F8C8D"
     description: Refactoring is needed.
 
   - name: WontFix
-    color: '#000000'
+    color: "#000000"
     description: This will not be worked on.
 
   - name: Unit Test
-    color: '#2ea7b2'
+    color: "#2ea7b2"
     description: Unit Test.
 
   - name: Clarification
-    color: '#3399FF'
+    color: "#3399FF"
     description: Clarification of the current situation.
 
   - name: Verified
-    color: '#b8e550'
+    color: "#b8e550"
     description: This issue or pull request was verified.
 
   - name: Verification
-    color: '#e8dd45'
+    color: "#e8dd45"
     description: This issue or pull request needs a verification.
 
   - name: Progress
-    color: '#AD8D43'
+    color: "#AD8D43"
     description: This is in Progress.
