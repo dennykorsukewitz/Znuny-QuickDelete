@@ -1,5 +1,5 @@
-# [7.0.0]
+# [7.0.1]
 
-## Migration
+## Maintanance
 
-- Ported to 7.0.
+- Updated documentation.
