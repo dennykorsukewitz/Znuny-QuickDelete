@@ -1,17 +1,18 @@
 ---
 name: UnitTest
 
-# Controls when the action will run.
 on:
   push:
   pull_request:
   workflow_dispatch:
     inputs:
       ZNUNY_REF:
+        description: "The branch, tag or SHA to checkout. (e.g.: rel-6_5)"
         required: false
         type: string
         default: dev
       FRAMEWORK:
+        description: "The framework to use. (e.g.: otrs, znuny)"
         required: false
         type: string
         default: znuny
