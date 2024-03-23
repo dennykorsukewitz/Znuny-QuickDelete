@@ -20,4 +20,3 @@ jobs:
       GIST: ${{ secrets.GIST }}
     with:
       ZNUNY_REF: ${{ inputs.ZNUNY_REF || 'dev' }}
-      FRAMEWORK: ${{ inputs.FRAMEWORK || 'znuny' }}
