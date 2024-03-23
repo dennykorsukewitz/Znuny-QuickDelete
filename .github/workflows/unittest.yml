@@ -8,13 +8,10 @@ on:
   workflow_dispatch:
     inputs:
       ZNUNY_REF:
+        description: "The branch, tag or SHA to checkout. (e.g.: rel-6_5)"
         required: false
         type: string
         default: dev
-      FRAMEWORK:
-        required: false
-        type: string
-        default: znuny
 
 jobs:
   UnitTest:
