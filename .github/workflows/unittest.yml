@@ -13,6 +13,7 @@ on:
         type: string
         default: rel-6_5
       FRAMEWORK:
+        description: "The framework to use. (e.g.: otrs, znuny)"
         required: false
         type: string
         default: otrs
