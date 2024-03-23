@@ -11,10 +11,11 @@ on:
         description: "The branch, tag or SHA to checkout. (e.g.: rel-6_5)"
         required: false
         type: string
-        default: dev
+        default: rel-6_5
       FRAMEWORK:
         required: false
         type: string
+        default: otrs
 
 jobs:
   UnitTest:
