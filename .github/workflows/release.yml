@@ -23,3 +23,5 @@ jobs:
     with:
       ZNUNY_REF: ${{ inputs.ZNUNY_REF || 'dev' }}
       FRAMEWORK: ${{ inputs.FRAMEWORK || 'znuny' }}
+    secrets:
+      PAT: ${{ secrets.PAT }}
