@@ -11,8 +11,13 @@
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Description Lang="en">Enables quick delete in ticket action row.</Description>
     <Description Lang="de">Ermöglicht es ein Ticket in die Junk-Queue zu verschieben.</Description>
-    <ChangeLog Version="6.0.2" Date="2019-01-30 16:02:19 +0100">Tidied code.</ChangeLog>
-    <ChangeLog Version="6.0.1" Date="2019-01-30 16:02:19 +0100">Ported to OTRS 6.</ChangeLog>
+    <ChangeLog Version="6.4.2" Date="2023-03-23 23:12:12 +0100">Updated documentation.</ChangeLog>
+    <ChangeLog Version="6.4.1" Date="2022-12-12 12:34:56 +0100">Ported to 6.4.</ChangeLog>
+    <ChangeLog Version="6.3.1" Date="2022-12-03 12:34:56 +0100">Ported to 6.3.</ChangeLog>
+    <ChangeLog Version="6.2.1" Date="2022-12-03 12:34:56 +0100">Ported to 6.2.</ChangeLog>
+    <ChangeLog Version="6.1.1" Date="2022-12-03 12:34:56 +0100">Ported to 6.1.</ChangeLog>
+    <ChangeLog Version="6.0.2" Date="2020-11-27 12:34:56 +0100">Tidied code.</ChangeLog>
+    <ChangeLog Version="6.0.1" Date="2019-01-30 12:34:56 +0100">Ported to OTRS 6.</ChangeLog>
     <Filelist>
         <File Permission="660" Location="doc/de/DK4Znuny-QuickDelete.pdf"/>
         <File Permission="660" Location="doc/en/DK4Znuny-QuickDelete.pdf"/>
