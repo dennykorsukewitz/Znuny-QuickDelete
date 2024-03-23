@@ -13,8 +13,10 @@ on:
         type: string
         default: dev
       FRAMEWORK:
+        description: "The framework to use. (e.g.: otrs, znuny)"
         required: false
         type: string
+        default: znuny
 
 jobs:
   UnitTest:
