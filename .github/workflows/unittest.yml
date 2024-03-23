@@ -12,6 +12,9 @@ on:
         required: false
         type: string
         default: dev
+      FRAMEWORK:
+        required: false
+        type: string
 
 jobs:
   UnitTest:
@@ -20,3 +23,4 @@ jobs:
       GIST: ${{ secrets.GIST }}
     with:
       ZNUNY_REF: ${{ inputs.ZNUNY_REF || 'rel-6_5' }}
+      FRAMEWORK: ${{ inputs.FRAMEWORK || 'otrs' }}
