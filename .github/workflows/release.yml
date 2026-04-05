@@ -5,7 +5,7 @@ on:
   push:
     tags:
       - "*"
-    # branches: ["dev"]
+
   workflow_dispatch:
     inputs:
       ZNUNY_REF:
