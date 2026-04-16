@@ -10,5 +10,4 @@ on:
 
 jobs:
   CodePolicy:
-    # uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.codepolicy.znuny.yml@dev
-    uses: dennykorsukewitz/Znuny-QuickDelete/.github/workflows/reusable.codepolicy.znuny.yml@dev-update
+    uses: dennykorsukewitz/dennykorsukewitz/.github/workflows/reusable.codepolicy.znuny.yml@dev
