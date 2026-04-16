@@ -1,6 +1,6 @@
 # Znuny-QuickDelete
 
-<img align="right" width="150" height="150" src="doc/images/Icon.png" alt="Znuny QuickDelete Icon">
+<img align="right" width="150" height="150" src="doc/images/icon.png" alt="Znuny QuickDelete Icon">
 
 This package adds the **"Quick Delete"** function to the ticket action menu.
 You can close a ticket without leaving a note.
