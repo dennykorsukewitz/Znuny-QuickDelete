@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>Znuny-QuickDelete</Name>
-    <Version>7.2.0</Version>
-    <Framework>7.2.x</Framework>
+    <Version>7.3.0</Version>
+    <Framework>7.3.x</Framework>
     <Vendor>Denny Korsukéwitz</Vendor>
     <URL>https://github.com/dennykorsukewitz/Znuny-QuickDelete</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Description Lang="en">Enables quick delete in ticket action row.</Description>
     <Description Lang="de">Ermöglicht es ein Ticket in die Junk-Queue zu verschieben.</Description>
-    <ChangeLog Version="7.2.0" Date="2026-04-17 23:25:07 +0100">Ported to 7.2.</ChangeLog>
-    <ChangeLog Version="7.1.0" Date="2026-04-17 23:25:07 +0100">Ported to 7.1.</ChangeLog>
+    <ChangeLog Version="7.3.0" Date="2026-04-17 23:22:07 +0100">Ported to 7.3.</ChangeLog>
+    <ChangeLog Version="7.2.0" Date="2026-04-17 13:25:07 +0100">Ported to 7.2.</ChangeLog>
+    <ChangeLog Version="7.1.0" Date="2026-04-17 12:25:07 +0100">Ported to 7.1.</ChangeLog>
     <ChangeLog Version="7.0.1" Date="2024-03-23 23:25:16 +0100">Updated documentation.</ChangeLog>
     <ChangeLog Version="7.0.0" Date="2024-03-18 23:25:07 +0100">Ported to 7.0.</ChangeLog>
     <ChangeLog Version="6.5.1" Date="2023-03-22 12:34:56 +0100">Ported to 6.5.</ChangeLog>

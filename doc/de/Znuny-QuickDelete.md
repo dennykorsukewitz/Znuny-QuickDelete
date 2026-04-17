@@ -9,7 +9,7 @@ Znuny-QuickDelete
 </h1>
 
 <h1 style="text-align: center;">
-Znuny 7.2
+Znuny 7.3
 </h1>
 <p style="padding-top: 450px">
     <br>
